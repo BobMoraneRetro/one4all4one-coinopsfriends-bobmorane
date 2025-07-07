@@ -1,4 +1,4 @@
-# one4all4one-coinops-bobmorane
+# one4all4one-coinopsfriends-bobmorane
 Retrobat & Batocera Theme inspired from RetroFE frontend and some warez builds like Coinops and Core Type R.
 
 ![LogoCoinops](https://github.com/user-attachments/assets/57d97ffd-5eea-436b-a10b-626367d5103c)

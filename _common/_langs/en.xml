@@ -57,10 +57,10 @@
 		<Rouge>Red</Rouge>
 		<!-- list of system views -->
 		<systlist>View for system list</systlist>
-		<systviewcops1>RFE - RetroFE NEXT (Not finished)</systviewcops1>
-		<systviewcops2>RFE - RetroFE NEXT 2 (Not finished)</systviewcops2>
-		<systviewcops1curve>RFE - RetroFE NEXT Curve (Not finished)</systviewcops1curve>
-		<systviewtetanos>RFE - RetroFE Type R (just started)</systviewtetanos>
+		<systviewcops1>RFE - RetroFE NEXT</systviewcops1>
+		<systviewcops2>RFE - RetroFE NEXT 2</systviewcops2>
+		<systviewcops1curve>RFE - RetroFE NEXT Curve</systviewcops1curve>
+		<systviewtetanos>RFE - RetroFE Type R</systviewtetanos>
 		<systviewHS>HyperBAT - hyperspin experience (Not finished)</systviewHS>
 		<systviewHM>HyperMAX - hypermax light version (Not finished)</systviewHM>
 		<systviewalek>Artflix - System view imagined by Alekfull (Not finished)</systviewalek>
@@ -84,7 +84,7 @@
 		<presetauraalt>Simple: RFE Aura alternative work in progress (Not usable)</presetauraalt>
 		<presetspeedbull>Simple: RFE speedbull</presetspeedbull>
 		<presettraviolta>Simple: RFE traviolta</presettraviolta>
-		<presettraviolta_alt>Simple: RFE traviolta alternative work in progress (WIP)</presettraviolta_alt>
+		<presettraviolta_alt>Simple: RFE traviolta</presettraviolta_alt>
 		<presetshowbig>Simple: RFE Show Big preview</presetshowbig>
 		<presetshowsmall>Simple: RFE Show Small preview</presetshowsmall>
 		<viewchoicezspin2>Simple: HFS Z-Spin alternative (Beta test)</viewchoicezspin2>

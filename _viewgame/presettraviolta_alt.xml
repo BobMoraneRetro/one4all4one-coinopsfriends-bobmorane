@@ -179,25 +179,29 @@
 			<linearSmooth>true</linearSmooth>
 			<zIndex>80</zIndex>
 		</image>
+		
 		<image name="logosytemgamelistshadow" extra="true">
+			<autoFade>false</autoFade>
 			<origin>0.5 0.5</origin>
 			<pos>0.942 0.052</pos>
-			<path>${intlogoclearpng}</path>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
 			<maxSize>0.1 0.1</maxSize>
 			<linearSmooth>true</linearSmooth>
-			<horizontalAlignment>left</horizontalAlignment>
 			<zIndex>80</zIndex>
 			<color>000000</color>
 		</image>
 		<image name="logosytemgamelist" extra="true">
+			<autoFade>false</autoFade>
 			<origin>0.5 0.5</origin>
 			<pos>0.94 0.05</pos>
-			<path>${intlogoclearpng}</path>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
 			<maxSize>0.1 0.1</maxSize>
 			<linearSmooth>true</linearSmooth>
-			<horizontalAlignment>left</horizontalAlignment>
 			<zIndex>80</zIndex>
-		</image>
+		</image>	
+		
 		<!-- Habillage Fanart -->
 		<image name="fanartpresetback" if="{system.theme} == 'windows' 
 			|| {system.theme} == 'switch'" extra="true">
@@ -308,6 +312,10 @@
 				<outerShadowColor>000000</outerShadowColor>
 			</shader>
 		</image>
+		
+		
+		
+		
 		<video name="previewvidpreset" extra="true">
 			<path>{game:video}</path>
 			<delay>0.6</delay>
