@@ -118,6 +118,7 @@
 			{system.theme} == 'cps1' || 
 			{system.theme} == 'cps2' || 
 			{system.theme} == 'cps3' || 
+			{system.theme} == 'cave' || 
 			{system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
 			!exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
 			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
@@ -202,6 +203,7 @@
 			{system.theme} == 'cps1' || 
 			{system.theme} == 'cps2' || 
 			{system.theme} == 'cps3' || 
+			{system.theme} == 'cave' || 
 			{system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
 			!exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
 			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
@@ -220,6 +222,7 @@
 			{system.theme} == 'cps1' || 
 			{system.theme} == 'cps2' || 
 			{system.theme} == 'cps3' || 
+			{system.theme} == 'cave' || 
 			{system.theme} == 'hbmame' ">"${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png"</path>
 			<zIndex>11</zIndex>
 			<scaleOrigin>-0.1 0</scaleOrigin>
