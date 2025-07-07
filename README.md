@@ -7,12 +7,12 @@ Theme for Emulation Station compatible with
 - [Batocera](https://batocera.org/)
 - [RetroBat](https://www.retrobat.org/)
 
-** V 1.00 - (2025 05 27) ** 
+** V 1.00 - (2025 07 07) ** 
 
 Description :
 
-    This theme is a standalone version of the Hyperbat view featured in the All4One4All multi-view theme.
-    It's inspired by the Hyperspin frontend and allows you to assign a theme to each system or even each game.
+    This theme is a standalone version of RFE views featured in the All4One4All multi-view theme.
+    It's inspired by the RetroFE frontend and allows you to assign a different view to each system.
 
 ---  
 
