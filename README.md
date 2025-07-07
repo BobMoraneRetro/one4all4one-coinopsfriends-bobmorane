@@ -1,5 +1,5 @@
-# one4all4one-hyperbat-bobmorane
-Retrobat & Batocera Theme inspired from Hyperspin frontend
+# one4all4one-coinops-bobmorane
+Retrobat & Batocera Theme inspired from RetroFE frontend and some warez builds like Coinops and Core Type R
 
 ![LogoHyperbat](https://github.com/user-attachments/assets/526ea69f-a6c2-41bd-8864-e68552f1c745)
 
