@@ -1,7 +1,7 @@
 # one4all4one-coinops-bobmorane
 Retrobat & Batocera Theme inspired from RetroFE frontend and some warez builds like Coinops and Core Type R2.5go normalem
 
-![LogoCoinops](https://github.com/user-attachments/assets/849ce47d-f0de-4429-8218-34a8276a348c)
+![LogoCoinops](https://github.com/user-attachments/assets/57d97ffd-5eea-436b-a10b-626367d5103c)
 
 Theme for Emulation Station compatible with
 - [Batocera](https://batocera.org/)
