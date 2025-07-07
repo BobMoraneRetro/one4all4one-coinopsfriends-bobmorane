@@ -16,8 +16,8 @@ Description :
 
 ---  
 
-# Game and system theme add-on
-You can find game or system themes to replace the generic view on discord here: https://discord.com/invite/msnaz7Kev7
+# Cabs per game
+You can find more cabs and more artwork on my discord here : https://discord.com/invite/msnaz7Kev7
 
 Info - Priority for displaying theme in gameview is : Specific theme for a game -> if not exist -> Defaut theme for gameview -> if not exist -> Defaut generic for gameview
 
