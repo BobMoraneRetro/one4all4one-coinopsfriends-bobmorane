@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<subset name="systannonce" displayName="${systannounce}" appliesTo="coinops">
+		<include name="classiquesyst" displayName="${classiquesyst}">${themePath}/_viewgame/commune/systeme/nomsystem.xml</include>
+		<include name="desactive" displayName="${desactive}"/>
+	</subset>
+	<subset name="infosmax" displayName="${infosmax}" appliesTo="coinops">
+		<include name="non" displayName="${no}"/>
+		<include name="oui" displayName="${yes}">${themePath}/_viewgameoption/gl-common/infosmax.xml</include>
+	</subset>
+	<subset name="hiscore" displayName="${hiscore}" appliesTo="coinops">
+		<include name="rankcadre" displayName="${rankcadre}">./_viewgameoption/gl-common/hi-score/hiscorecadre.xml</include>
+		<include name="rankupcenter" displayName="${rankupcenter}">./_viewgameoption/gl-common/hi-score/hiscorecentre.xml</include>
+		<include name="inactif" displayName="${inactif}"/>
+	</subset>
+	<subset name="hiscoretype" ifSubset="hiscore:rankupcenter|rankcadre" displayName="${hiscoretype}" appliesTo="coinops">
+		<include name="top3" displayName="${top3}"/>
+		<include name="top5" displayName="${top5}"/>
+		<include name="allrank" displayName="${allrank}"/>
+	</subset>
+	<subset name="gwheelbackgr" displayName="${gwheelbackgr}" appliesTo="coinops">
+		<include name="sisaccades" displayName="${sisaccades}"/>
+		<include name="logounified" displayName="${logounified}">${themePath}/_viewgameoption/gl-common/autounified.xml</include>
+		<include name="ovalcarbon" displayName="${ovalcarbon}">${themePath}/_viewgameoption/gl-common/autoovalcarbon.xml</include>
+		<include name="ovalsilver" displayName="${ovalsilver}">${themePath}/_viewgameoption/gl-common/autoovalsilver.xml</include>
+		<include name="rectcarbon" displayName="${rectcarbon}">${themePath}/_viewgameoption/gl-common/autorectcabon.xml</include>
+		<!-- <include name="hfsround" displayName="${hfsround}">${themePath}/_viewgameoption/gl-common/autoHFSround.xml</include> -->
+	</subset>
+	<subset name="letternav" displayName="${letternav}" appliesTo="coinops">
+		<include name="navhoricoinstyle" displayName="${navhoricoinstyle}">${themePath}/_viewgameoption/gl-common/navhoricoinstyle.xml</include>
+		<include name="navvertcoinstyle" displayName="${navvertcoinstyle}">${themePath}/_viewgameoption/gl-common/navvertcoinstyle.xml</include>
+		<include name="navvertposition" displayName="${navvertposition}">${themePath}/_viewgameoption/gl-common/navvertposition.xml</include>
+		<include name="desactive" displayName="${desactive}"/>
+	</subset>
+	<subset name="spacer001" displayName=" " appliesTo="${vide}">
+		<include name=" " displayName=" "/>
+	</subset>
+	<!-- <subset name="spacer01" displayName="${spacercoinops}" appliesTo="${vide}"> -->
+	<!-- <include name="desactive" displayName=" "/> -->
+	<!-- </subset> -->
+	<!-- <subset name="spacermediaops" displayName="${mediacoinops}" appliesTo="${vide}"> -->
+	<!-- <include name="desactive" displayName=" "/> -->
+	<!-- </subset> -->
+	<!-- ################################################################################# -->
+	<!-- ######################## VUES JEUX Coinops ###################################### -->
+	<!-- ################################################################################# -->
+	<subset name="systback" ifSubset="lismoi:retrobat" displayName="${fondsys}" appliesTo="coinops">
+		<include name="cpscollection" displayName="${fondsyscollection}">./_viewgameoption/gl-coinopsnext/sysbackcoinops.xml</include>
+		<include name="cpssimplenomarquee" displayName="${fondsysunified}">./_viewgameoption/gl-coinopsnext/sysbackcoinops.xml</include>
+		<include name="cpssimplemarquee" displayName="${fondsysunifiedautomarquee}">./_viewgameoption/gl-coinopsnext/sysbackcoinops.xml</include>
+		<include name="cpsnext2" displayName="${fondsysnext2}">./_viewgameoption/gl-coinopsnext/sysbackcoinops.xml</include>
+		<!-- <include name="cpsnext" displayName="${fondsysnext}">./_viewgameoption/gl-coinopsnext/sysbackcoinops.xml</include> -->
+		<include name="cpsperso" displayName="${fondsyscustom}">./_viewgameoption/gl-coinopsnext/sysbackcoinops.xml</include>
+	</subset>
+	<subset name="systback" ifSubset="lismoi:batocera" displayName="${fondsys}" appliesTo="coinops">
+		<include name="cpscollection" displayName="${fondsyscollection}">./_viewgameoption/gl-coinopsnext/sysbackcoinopstocera.xml</include>
+		<include name="cpssimplenomarquee" displayName="${fondsysunified}">./_viewgameoption/gl-coinopsnext/sysbackcoinopstocera.xml</include>
+		<include name="cpssimplemarquee" displayName="${fondsysunifiedautomarquee}">./_viewgameoption/gl-coinopsnext/sysbackcoinopstocera.xml</include>
+		<include name="cpsnext2" displayName="${fondsysnext2}">./_viewgameoption/gl-coinopsnext/sysbackcoinopstocera.xml</include>
+		<!-- <include name="cpsnext" displayName="${fondsysnext}">./_viewgameoption/gl-coinopsnext/sysbackcoinops.xml</include> -->
+		<include name="cpsperso" displayName="${fondsyscustom}">./_viewgameoption/gl-coinopsnext/sysbackcoinopstocera.xml</include>
+	</subset>
+	<!-- <subset name="copscabs" displayName="${copscabs}" appliesTo="presetcoinops"> -->
+	<!-- <include name="cabscoinops" displayName="${cabscoinops}"/> -->
+	<!-- <include name="cabssolo" displayName="${cabssolo}"/> -->
+	<!-- <include name="cabscoinandsolo" displayName="${cabscoinandsolo}"/> -->
+	<!-- </subset> -->
+	<subset name="defaultcabs" displayName="${cabsdefault}" appliesTo="coinops,presetcoinops">
+		<include name="viewlixnoir" displayName="${viewlixnoir}"/>
+		<include name="viewlixbleue" displayName="${viewlixbleue}"/>
+		<include name="viewlixjaune" displayName="${viewlixjaune}"/>
+		<include name="viewlixrose" displayName="${viewlixrose}"/>
+		<include name="viewlixrouge" displayName="${viewlixrouge}"/>
+		<include name="viewlixvert" displayName="${viewlixvert}"/>
+		<include name="viewlixviolet" displayName="${viewlixviolet}"/>
+		<include name="astrocity" displayName="${astrocity}"/>
+		<include name="blastcity" displayName="${blastcity}"/>
+		<include name="nuc" displayName="${nuc}"/>
+		<include name="snkneogeo64" displayName="${snkneogeo64}"/>
+		<include name="snkneogeomvs" displayName="${snkneogeomvs}"/>
+		<include name="atomiswave" displayName="${atomiswave}"/>
+		<include name="borne3d" displayName="${borne3d}"/>
+		<include name="trinitron" displayName="${trinitron}"/>
+	</subset>
+	<subset name="gloverlay" displayName="${overlaygamelst}" appliesTo="coinops">
+		<include name="overatar" displayName="Atarashi léger"/>
+		<include name="overatar2" displayName="Atarashi original"/>
+		<include name="overdiam" displayName="Diamond Legend"/>
+		<include name="off" displayName="Désactivé"/>
+	</subset>
+	<subset name="prevdemo" ifSubset="lismoi:retrobat" displayName="${prevdemo}" appliesTo="coinops">
+		<include name="pvidcustomv2" displayName="${pvidcustomv2}">./_Viewgameoption/gl-coinopsnext/p1fixencustomnscrap.xml</include>
+		<include name="pvidsevmd" displayName="${pvidsevmd}">./_viewgameoption/gl-coinopsnext/p2scrapmd.xml</include>
+		<include name="pvidsev" displayName="${pvidsev}">./_viewgameoption/gl-coinopsnext/p3scrap.xml</include>
+		<!-- <include name="pvidsev0delay" displayName="${pvidsev0delay}">./_viewgameoption/gl-coinopsnext/p4delayv1.xml</include> -->
+		<include name="pvidsev0delayv2" displayName="${pvidsev0delayv2}">./_viewgameoption/gl-coinopsnext/p4delay0v2.xml</include>
+		<!-- <include name="pvidcustom" displayName="${pvidcustom}">./_viewgameoption/gl-coinopsnext/p5customdirectnfixenscrap.xml</include> -->
+		<!-- <include name="pvidcustomv3" displayName="${pvidcustomv3}">./_viewgameoption/gl-coinopsnext/p6customdirectnscrapdirect.xml</include> -->
+		<include name="desactive" displayName="${desactive}"/>
+	</subset>
+	<subset name="prevdemo" ifSubset="lismoi:batocera" displayName="${prevdemo}" appliesTo="coinops">
+		<include name="pvidcustomv2" displayName="${pvidcustomv2}">./_Viewgameoption/gl-coinopsnext/p1fixencustomnscraptocera.xml</include>
+		<include name="pvidsevmd" displayName="${pvidsevmd}">./_viewgameoption/gl-coinopsnext/p2scrapmd.xml</include>
+		<include name="pvidsev" displayName="${pvidsev}">./_viewgameoption/gl-coinopsnext/p3scraptocera.xml</include>
+		<!-- <include name="pvidsev0delay" displayName="${pvidsev0delay}">./_viewgameoption/gl-coinopsnext/p4delayv1.xml</include> -->
+		<include name="pvidsev0delayv2" displayName="${pvidsev0delayv2}">./_viewgameoption/gl-coinopsnext/p4delay0v2tocera.xml</include>
+		<!-- <include name="pvidcustom" displayName="${pvidcustom}">./_viewgameoption/gl-coinopsnext/p5customdirectnfixenscrap.xml</include> -->
+		<!-- <include name="pvidcustomv3" displayName="${pvidcustomv3}">./_viewgameoption/gl-coinopsnext/p6customdirectnscrapdirect.xml</include> -->
+		<include name="desactive" displayName="${desactive}"/>
+	</subset>
+	<subset name="shaders" displayName="${videoshader}" appliesTo="coinops">
+		<include name="scan01vid" displayName="${scan01vid}">./_viewgameoption/gl-coinopsnext/shaderscreen.xml</include>
+		<include name="scan01" displayName="${scan01}">./_viewgameoption/gl-coinopsnext/shaderscreen.xml</include>
+		<include name="scan02vid" displayName="${scan02vid}">./_viewgameoption/gl-coinopsnext/shaderscreen.xml</include>
+		<include name="scan02" displayName="${scan02}">./_viewgameoption/gl-coinopsnext/shaderscreen.xml</include>
+		<include name="scan03vid" displayName="${scan03vid}">./_viewgameoption/gl-coinopsnext/shaderscreen.xml</include>
+		<include name="scan03" displayName="${scan03}">./_viewgameoption/gl-coinopsnext/shaderscreen.xml</include>
+		<include name="crt01" displayName="${crt01}">./_viewgameoption/gl-coinopsnext/shaderscreen.xml</include>
+		<include name="crt01vid" displayName="${crt01vid}">./_viewgameoption/gl-coinopsnext/shaderscreen.xml</include>
+		<include name="desactive" displayName="${desactive}"/>
+	</subset>
+	<subset name="showfilter" displayName="${filtershow}" appliesTo="coinops">
+		<include name="yes" displayName="${yes}">./_viewgameoption/gl-coinopsnext/filtershow.xml</include>
+		<include name="no" displayName="${no}"/>
+	</subset>
+	<subset name="favoris" displayName="${favoris}" appliesTo="coinops">
+		<include name="coeur" displayName="${coeur}">./_ViewGameOption/GL-CoinOPSnext/favorisheart.xml</include>
+		<include name="no" displayName="${no}"/>
+	</subset>
+	<subset name="fondgamewheel" ifSubset="lismoi:retrobat" displayName="${wheelfond}" appliesTo="coinops">
+		<include name="covertsolo" displayName="${covertsolo}">./_viewgameoption/gl-coinopsnext/imagefondwheel.xml</include>
+		<include name="fanartsolo" displayName="${fanartsolo}">./_viewgameoption/gl-coinopsnext/imagefondwheel.xml</include>
+		<include name="boxartsolo" displayName="${boxartsolo}">./_viewgameoption/gl-coinopsnext/imagefondwheel.xml</include>
+		<include name="thumbsolo" displayName="${thumbsolo}">./_viewgameoption/gl-coinopsnext/imagefondwheel.xml</include>
+	</subset>
+	<subset name="fondgamewheel" ifSubset="lismoi:batocera" displayName="${wheelfond}" appliesTo="coinops">
+		<include name="covertsolo" displayName="${covertsolo}">./_viewgameoption/gl-coinopsnext/imagefondwheeltocera.xml</include>
+		<include name="fanartsolo" displayName="${fanartsolo}">./_viewgameoption/gl-coinopsnext/imagefondwheeltocera.xml</include>
+		<include name="boxartsolo" displayName="${boxartsolo}">./_viewgameoption/gl-coinopsnext/imagefondwheeltocera.xml</include>
+		<include name="thumbsolo" displayName="${thumbsolo}">./_viewgameoption/gl-coinopsnext/imagefondwheeltocera.xml</include>
+	</subset>
+	<subset name="fondvideogw" displayName="${gwvideofond}" appliesTo="coinops">
+		<include name="vagues" displayName="${vagues}">./_viewgameoption/gl-coinopsnext/fondgwvideo.xml</include>
+		<include name="matrix" displayName="${matrix}">./_viewgameoption/gl-coinopsnext/fondgwvideo.xml</include>
+		<include name="desactive" displayName="${desactive}"/>
+	</subset>
+	<subset name="fondvideogwint" displayName="${gwvideofondint}" appliesTo="coinops">
+		<include name="light" displayName="${light}">./_viewgameoption/gl-coinopsnext/fondgwvideo.xml</include>
+		<include name="middle" displayName="${middle}">./_viewgameoption/gl-coinopsnext/fondgwvideo.xml</include>
+		<include name="heavy" displayName="${heavy}">./_viewgameoption/gl-coinopsnext/fondgwvideo.xml</include>
+		<include name="superheavy" displayName="${superheavy}">./_viewgameoption/gl-coinopsnext/fondgwvideo.xml</include>
+	</subset>
+	<subset name="wheelform" displayName="${wheelforme}" appliesTo="coinops">
+		<include name="standard" displayName="${standardwheel}">./_viewgameoption/gl-coinopsnext/wheelform.xml</include>
+		<include name="courbeinverse" displayName="${courbeinverse}">./_viewgameoption/gl-coinopsnext/wheelform.xml</include>
+		<include name="vertical" displayName="${vertical}">./_viewgameoption/gl-coinopsnext/wheelform.xml</include>
+	</subset>
+	<subset name="wheelspace" displayName="${wheelspace}" appliesTo="coinops">
+		<include name="serre" displayName="${serre}"/>
+		<include name="serre2" displayName="${serre2}"/>
+		<include name="aere" displayName="${aere}"/>
+		<include name="tresserre" displayName="${tresserre}"/>
+	</subset>
+	<subset name="wheelspeed" displayName="${wheelspeed}" appliesTo="coinops">
+		<include name="original" displayName="${original}">./_viewgameoption/gl-coinopsnext/wheelspeed.xml</include>
+		<include name="default" displayName="${default}">./_viewgameoption/gl-coinopsnext/wheelspeed.xml</include>
+		<include name="smooth" displayName="${smooth}">./_viewgameoption/gl-coinopsnext/wheelspeed.xml</include>
+		<include name="speedslow3" displayName="${speedslow3}">./_viewgameoption/gl-coinopsnext/wheelspeed.xml</include>
+		<include name="speedslow2" displayName="${speedslow2}">./_viewgameoption/gl-coinopsnext/wheelspeed.xml</include>
+		<include name="speedslow1" displayName="${speedslow1}">./_viewgameoption/gl-coinopsnext/wheelspeed.xml</include>
+		<include name="speedfast1" displayName="${speedfast1}">./_viewgameoption/gl-coinopsnext/wheelspeed.xml</include>
+		<include name="speedfast2" displayName="${speedfast2}">./_viewgameoption/gl-coinopsnext/wheelspeed.xml</include>
+		<include name="instant" displayName="${instant}">./_viewgameoption/gl-coinopsnext/wheelspeed.xml</include>
+	</subset>
+	<subset name="wheelopacity" displayName="${wheelopacity}" appliesTo="coinops">
+		<include name="default" displayName="${default}"/>
+		<include name="notransp" displayName="${notransp}">./_viewgameoption/gl-coinopsnext/wheelopacity.xml</include>
+		<include name="vis80" displayName="${vis80}">./_viewgameoption/gl-coinopsnext/wheelopacity.xml</include>
+		<include name="vis60" displayName="${vis60}">./_viewgameoption/gl-coinopsnext/wheelopacity.xml</include>
+		<include name="vis40" displayName="${vis40}">./_viewgameoption/gl-coinopsnext/wheelopacity.xml</include>
+		<include name="vis20" displayName="${vis20}">./_viewgameoption/gl-coinopsnext/wheelopacity.xml</include>
+		<include name="vis0" displayName="${vis0}">./_viewgameoption/gl-coinopsnext/wheelopacity.xml</include>
+	</subset>
+	<subset name="wheelcolor" displayName="${wheelcolor}" appliesTo="coinops">
+		<include name="colored" displayName="${colored}"/>
+		<include name="blackwhite" displayName="${blackwhite}">./_viewgameoption/gl-coinopsnext/wheelcolor.xml</include>
+	</subset>
+	<subset name="fanartgw" ifSubset="lismoi:retrobat" displayName="${wheelfanart}" appliesTo="coinops">
+		<include name="glissgd" displayName="${glissgd}"/>
+		<include name="glisshb" displayName="${glisshb}"/>
+		<include name="stdvid" displayName="${stdvid}"/>
+		<include name="smoothvid" displayName="${smoothvid}"/>
+		<include name="scalvid" displayName="${scalvid}"/>
+	</subset>
+	<subset name="systbacktransition" ifSubset="lismoi:retrobat" displayName="${fondtransition}" appliesTo="coinops">
+		<include name="smoothsyst" displayName="${smoothsyst}"/>
+		<include name="standard" displayName="${standard}"/>
+		<include name="scalsyst" displayName="${scalsyst}"/>
+	</subset>
+	<subset name="previewvidtransition" ifSubset="lismoi:retrobat" displayName="${vidtransition}" appliesTo="coinops">
+		<include name="stdvid" displayName="${stdvid}"/>
+		<include name="smoothvid" displayName="${smoothvid}"/>
+		<include name="scalvid" displayName="${scalvid}"/>
+	</subset>
+	<subset name="metadatajeux" displayName="${metadata}" appliesTo="coinops">
+		<include name="metadall" displayName="${metadall}">./_viewgameoption/gl-coinopsnext/metadata.xml</include>
+		<include name="metadallnolang" displayName="${metadallnolang}">./_viewgameoption/gl-coinopsnext/metadata.xml</include>
+		<include name="metadallnolangnoname" displayName="${metadallnolangnoname}">./_viewgameoption/gl-coinopsnext/metadata.xml</include>
+		<include name="metadbasicnoed" displayName="${metadbasicnoed}">./_viewgameoption/gl-coinopsnext/metadata.xml</include>
+		<include name="desactive" displayName="${desactive}"/>
+	</subset>
+	<subset name="infocaroussel" displayName="${metaicones}" appliesTo="coinops">
+		<include name="bref" displayName="${bref}">./_viewgameoption/gl-coinopsnext/infoicone/infolateral.xml</include>
+		<include name="perm" displayName="${perm}">./_viewgameoption/gl-coinopsnext/infoicone/infolateral.xml</include>
+		<include name="desactive" displayName="${desactive}"/>
+	</subset>
+	<!-- <subset name="starthumb" displayName="${starthumb}" appliesTo="presetstarbox"> -->
+	<!-- <include name="starbox2d" displayName="${starbox2d}">./_viewgameoption/gl-coinopsnext/2dbox.xml</include> -->
+	<!-- <include name="starbox3d" displayName="${starbox3d}">./_viewgameoption/gl-coinopsnext/3dbox.xml</include> -->
+	<!-- </subset> -->
+</theme>
