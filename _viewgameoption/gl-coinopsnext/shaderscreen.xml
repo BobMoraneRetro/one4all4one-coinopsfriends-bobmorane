@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<image name="screenshader" ifSubset="shaders:scan01vid|scan02vid|scan03vid|crt01vid" extra="true">
+			<!-- Position X Y -->
+			<pos>0.060 0.295</pos>
+			<!-- Taille -->
+			<maxSize>0.38 0.49</maxSize>
+			<!-- Chemin -->
+			<path ifSubset="shaders:scan01vid">${themePath}/_viewgame/shaders/scanlines01.png</path>
+			<path ifSubset="shaders:scan02vid">${themePath}/_viewgame/shaders/scanlines02.png</path>
+			<path ifSubset="shaders:scan03vid">${themePath}/_viewgame/shaders/scanlines03.png</path>
+			<path ifSubset="shaders:crt01vid">${themePath}/_viewgame/shaders/crt.png</path>
+			<color>FFFFFF60</color>
+			<tile>true</tile>
+			<!-- Position Z -->
+			<zIndex>9</zIndex>
+			<!-- <visible fSubset="PrevDemo:PVidSeVMD|PVidSeV|PVidSeV0delay">true</visible> -->
+			<visible ifSubset="prevdemo:pvidcustom|pvidcustomv2|pvidcustomv3">
+						!exists(${extgamevideoavi})
+			&amp;&amp;	!exists(${extgamevideomp4})
+			
+			</visible>
+		</image>
+		<image name="screenshader" ifSubset="shaders:scan01|scan02|scan03|crt01" extra="true">
+			<!-- Position X Y -->
+			<pos>0 0</pos>
+			<!-- Taille -->
+			<maxSize>1 1</maxSize>
+			<!-- Chemin -->
+			<path ifSubset="shaders:scan01">${themePath}/_viewgame/shaders/scanlines01.png</path>
+			<path ifSubset="shaders:scan02">${themePath}/_viewgame/shaders/scanlines02.png</path>
+			<path ifSubset="shaders:scan03">${themePath}/_viewgame/shaders/scanlines03.png</path>
+			<path ifSubset="shaders:crt01">${themePath}/_viewgame/shaders/crt.png</path>
+			<color>FFFFFF60</color>
+			<tile>true</tile>
+			<!-- Position Z -->
+			<zIndex>20</zIndex>
+			<!-- <visible fSubset="PrevDemo:PVidSeVMD|PVidSeV|PVidSeV0delay">true</visible> -->
+			<!-- <visible ifSubset="prevdemo:pvidcustom|pvidcustomv2|pvidcustomv3"> -->
+						<!-- !exists(${extgamevideoavi}) -->
+			<!-- &amp;&amp;	!exists(${extgamevideomp4}) -->
+			
+			<!-- </visible> -->
+		</image>
+	</customView>
+</theme>

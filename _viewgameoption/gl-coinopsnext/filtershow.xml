@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<text name="lblfilter" extra="true">
+			<visible>{system:hasfilter}</visible>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<text>Filtre actif - </text>
+			<fontSize>0.02</fontSize>
+			<!-- <pos>0.04 0.97</pos> -->
+			<pos ifHelpPrompts="false">0.04 0.962</pos>
+			<pos ifHelpPrompts="true">0.04 0.923</pos>
+			<color>ffffffff</color>
+			<glowColor>00000080</glowColor>
+			<glowOffset>1</glowOffset>
+			<glowSize>1</glowSize>
+			<glowOffset>1</glowOffset>
+			<glowSize>1</glowSize>
+			<origin>0 0</origin>
+			<zIndex>510</zIndex>
+			<alignment>left</alignment>
+			<forceUppercase>true</forceUppercase>
+			<opacity>0.5</opacity>
+		</text>
+		<text name="filter" extra="true">
+			<visible>{system:hasfilter}</visible>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<text>{system:filter}</text>
+			<fontSize>0.02</fontSize>
+			<pos ifHelpPrompts="false">0.102 0.962</pos>
+			<pos ifHelpPrompts="true">0.102 0.923</pos>
+			<color>ffffffff</color>
+			<glowColor>00000080</glowColor>
+			<glowOffset>1</glowOffset>
+			<glowSize>1</glowSize>
+			<glowOffset>1</glowOffset>
+			<glowSize>1</glowSize>
+			<origin>0 0</origin>
+			<zIndex>510</zIndex>
+			<alignment>left</alignment>
+			<forceUppercase>true</forceUppercase>
+			<opacity>0.5</opacity>
+		</text>
+	</customView>
+</theme>

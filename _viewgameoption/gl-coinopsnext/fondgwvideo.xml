@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+	<video name="loop01" extra="true">
+		<path ifSubset="fondvideogw:vagues">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/background.mp4</path>
+		<path ifSubset="fondvideogw:matrix">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/matrix.mp4</path>
+		<effect>none</effect>		
+		<origin>0.5 0.5</origin>
+		<pos>0.5 0.5</pos>
+		<maxSize>1 1</maxSize>
+		<zIndex>2</zIndex>
+		<opacity ifSubset="fondvideogwint:light">0.2</opacity>
+		<opacity ifSubset="fondvideogwint:middle">0.3</opacity>
+		<opacity ifSubset="fondvideogwint:heavy">0.4</opacity>
+		<opacity ifSubset="fondvideogwint:superheavy">0.6</opacity>
+	</video>
+   </customView>
+   </theme>

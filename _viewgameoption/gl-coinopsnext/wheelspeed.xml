@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<!--custom-->
+		<gamecarousel name="gamecarousel">
+			<!-- <transitionSpeed ifSubset="wheelspeed:original"/> -->
+			<transitionSpeed ifSubset="wheelspeed:default">450</transitionSpeed>
+			<transitionSpeed ifSubset="wheelspeed:smooth">1450</transitionSpeed>
+			<transitionSpeed ifSubset="wheelspeed:speedslow3">950</transitionSpeed>
+			<transitionSpeed ifSubset="wheelspeed:speedslow2">800</transitionSpeed>
+			<transitionSpeed ifSubset="wheelspeed:speedslow1">650</transitionSpeed>
+			<transitionSpeed ifSubset="wheelspeed:speedfast1">350</transitionSpeed>
+			<transitionSpeed ifSubset="wheelspeed:speedfast2">150</transitionSpeed>
+			<transitionSpeed ifSubset="wheelspeed:instant">0</transitionSpeed>
+		</gamecarousel>
+	</customView>
+</theme>

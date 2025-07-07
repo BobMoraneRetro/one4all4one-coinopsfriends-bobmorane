@@ -1,0 +1,973 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<image name="fondmur" extra="true">
+			<path>./_viewgame/coinops/murnuarrondi.png</path>
+			<size>1 1</size>
+			<pos>0.45 0.5</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>2</zIndex>
+			<opacity>1</opacity>
+		</image>
+		<!-- ################################################################################################# -->
+		<!-- ############################################ choix 1 ############################################ -->
+		<!-- ################################################################################################# -->
+		<!-- Si aucun cabinets n'existe, prend le fond système dans coinops collec -->
+		<image name="fondsystem" ifSubset="systback:cpscollection" extra="true">
+			<linearSmooth>true</linearSmooth>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<autoFade>false</autoFade>
+			<path>${intcoinopscollec}</path>
+			<path if="{system.theme} == 'naomi' || 
+			{system.theme} == 'naomi2' || 
+			{system.theme} == 'atomiswave' || 
+			{system.theme} == 'neogeo64' || 
+			{system.theme} == 'ps3' || 
+			{system.theme} == 'ps4' || 
+			{system.theme} == 'ps5' || 
+			{system.theme} == 'xbox360' || 
+			{system.theme} == 'windows' || 
+			{system.theme} == 'windowsbis' || 
+			{system.theme} == 'atarilynx' || 
+			{system.theme} == 'gamegear' || 
+			{system.theme} == 'switch' || 
+			{system.theme} == 'wiiu' || 
+			{system.theme} == 'vircon32' || 
+			{system.theme} == 'boomershooter' || 
+			{system.theme} == 'flash'">${themePath}/_viewgame/coinops/coinopsspec/${system.theme}.png</path>
+			<zIndex>10</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<!-- <visible if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png")</visible> -->
+		</image>
+		<!-- Affiche une Tv et une affiche automatique si le fondsystem n'existe pas et qu'un fichier *.miss existe dans \_viewgame\coinops\coinopscollmiss -->
+		<image name="trinitron" ifSubset="systback:cpscollection" extra="true">
+			<visible>exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<linearSmooth>true</linearSmooth>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<autoFade ifSubset="systbacktransition:standard">false</autoFade>
+			<path>${themePath}/_viewgame/coinops/defautcabs/trinitron.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondtrini1" ifSubset="systback:cpscollection" extra="true">
+			<visible>exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<!-- <shared>false</shared> -->
+			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},{game:thumbnail},{game:boxart},{game:image})</path>
+			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},{game:thumbnail},{game:boxart})</path>
+			<color>b7b7b7</color>
+			<colorEnd>FFFFFFDD</colorEnd>
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.43 1</maxSize>
+			<pos>0.25 0.15</pos>
+			<origin>0.5 0.5</origin>
+			<saturation>0.5</saturation>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondtrini2" ifSubset="systback:cpscollection" extra="true">
+			<visible>exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.15 0.10</maxSize>
+			<pos>0.25 0.06</pos>
+			<maxSize>0.2 0.15</maxSize>
+			<pos>0.25 0.12</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<path>firstfile({game:marquee},{game:wheel})</path>
+		</image>
+		<!-- Affiche le choix de l'utilisateur si le fondsystem ou borne spécifique n'existent pas et qu'un fichier *.miss n'existe pas dans \_viewgame\coinops\coinopscollmiss -->
+		<image name="fonddefaut" ifSubset="systback:cpscollection" extra="true">
+			<linearSmooth>true</linearSmooth>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<autoFade ifSubset="systbacktransition:standard">false</autoFade>
+			<path ifSubset="defaultcabs:trinitron">${themePath}/_viewgame/coinops/defautcabs/trinitron.png</path>
+			<path ifSubset="defaultcabs:viewlixbleue">${themePath}/_viewgame/coinops/defautcabs/bleue.png</path>
+			<path ifSubset="defaultcabs:viewlixjaune">${themePath}/_viewgame/coinops/defautcabs/jaune.png</path>
+			<path ifSubset="defaultcabs:viewlixrose">${themePath}/_viewgame/coinops/defautcabs/rose.png</path>
+			<path ifSubset="defaultcabs:viewlixrouge">${themePath}/_viewgame/coinops/defautcabs/rouge.png</path>
+			<path ifSubset="defaultcabs:viewlixvert">${themePath}/_viewgame/coinops/defautcabs/vert.png</path>
+			<path ifSubset="defaultcabs:viewlixviolet">${themePath}/_viewgame/coinops/defautcabs/violet.png</path>
+			<path ifSubset="defaultcabs:astrocity">${themePath}/_viewgame/coinops/defautcabs/astrocity.png</path>
+			<path ifSubset="defaultcabs:blastcity">${themePath}/_viewgame/coinops/defautcabs/blastcity.png</path>
+			<path ifSubset="defaultcabs:snkneogeo64">${themePath}/_viewgame/coinops/defautcabs/snk.png</path>
+			<path ifSubset="defaultcabs:snkneogeomvs">${themePath}/_viewgame/coinops/defautcabs/snkmvs.png</path>
+			<path ifSubset="defaultcabs:nuc">${themePath}/_viewgame/coinops/defautcabs/naomi.png</path>
+			<path ifSubset="defaultcabs:atomiswave">${themePath}/_viewgame/coinops/defautcabs/atomiswave.png</path>
+			<path ifSubset="defaultcabs:borne3d">${themePath}/_viewgame/coinops/defautcabs/3d.png</path>
+			<path ifSubset="defaultcabs:viewlixnoir">${themePath}/_viewgame/coinops/defautcabs/defautcabs.png</path>
+			<path if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">${themePath}/_viewgame/coinops/defautcabs/naomi.png</path>
+			<path if="{system.theme} == 'neogeo64'">${themePath}/_viewgame/coinops/defautcabs/neogeo64.png</path>
+			<path if="{system.theme} == 'atomiswave'">${themePath}/_viewgame/coinops/defautcabs/atomiswave.png</path>
+			<!-- <path if="${system.manufacturer} == 'Collections'">("${themePath}/_viewgame/coinops/defautcabs/" + stem({game:system:theme}) + ".png")</path> -->
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<visible if="{system.theme} == 'fbneo' || 
+			{system.theme} == 'cps1' || 
+			{system.theme} == 'cps2' || 
+			{system.theme} == 'cps3' || 
+			{system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+		</image>
+		<!-- Marquee de la borne en fonction de la borne par défaut choisies -->
+		<image name="fondposter1" ifSubset="systback:cpscollection" extra="true">
+			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg",{game:image})</path>
+			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<color>b7b7b7</color>
+			<colorEnd>FFFFFFDD</colorEnd>
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.43 1</maxSize>
+			<pos>0.25 0.2</pos>
+			<size ifSubset="defaultcabs:borne3d">0.43 0.45</size>
+			<pos ifSubset="defaultcabs:borne3d">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:trinitron">0.33 0.35</size>
+			<pos ifSubset="defaultcabs:trinitron">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:astrocity">0.2 0.2</size>
+			<pos ifSubset="defaultcabs:astrocity">0.25 0.23</pos>
+			<size ifSubset="defaultcabs:blastcity">0.4 0</size>
+			<pos ifSubset="defaultcabs:blastcity">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:snkneogeo64">0.4 0.3</size>
+			<pos ifSubset="defaultcabs:snkneogeo64">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:snkneogeomvs">0.45 0.35</size>
+			<pos ifSubset="defaultcabs:snkneogeomvs">0.25 0.105</pos>
+			<size ifSubset="defaultcabs:nuc">0.355 0</size>
+			<pos ifSubset="defaultcabs:nuc">0.245 0.105</pos>
+			<size ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.25 0.3</size>
+			<pos ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.25 0.25</pos>
+			<size if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.35 0.3</size>
+			<pos if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.25 0.105</pos>
+			<size if="{system.theme} == 'atomiswave'">0.25 0.3</size>
+			<pos if="{system.theme} == 'atomiswave'">0.25 0.23</pos>
+			<size if="{system.theme} == 'neogeo64'">0.4 0.3</size>
+			<pos if="{system.theme} == 'neogeo64'">0.25 0.15</pos>
+			<origin>0.5 0.5</origin>
+			<saturation>0.5</saturation>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+		</image>
+		<image name="fondposter2" ifSubset="systback:cpscollection" extra="true">
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.15 0.10</maxSize>
+			<pos>0.25 0.06</pos>
+			<maxSize ifSubset="defaultcabs:borne3d">0.2 0.2</maxSize>
+			<pos ifSubset="defaultcabs:borne3d">0.25 0.11</pos>
+			<maxSize ifSubset="defaultcabs:trinitron">0.2 0.15</maxSize>
+			<pos ifSubset="defaultcabs:trinitron">0.25 0.12</pos>
+			<maxSize ifSubset="defaultcabs:astrocity">0.1 0.1</maxSize>
+			<pos ifSubset="defaultcabs:astrocity">0.25 0.2</pos>
+			<maxSize ifSubset="defaultcabs:blastcity">0.2 0.12</maxSize>
+			<pos ifSubset="defaultcabs:blastcity">0.25 0.06</pos>
+			<maxSize ifSubset="defaultcabs:snkneogeo64">0.17 0.14</maxSize>
+			<pos ifSubset="defaultcabs:snkneogeo64">0.25 0.075</pos>
+			<maxSize ifSubset="defaultcabs:snkneogeomvs">0.2 0.2</maxSize>
+			<pos ifSubset="defaultcabs:snkneogeomvs">0.25 0.105</pos>
+			<maxSize ifSubset="defaultcabs:nuc">0.2 0.08</maxSize>
+			<pos ifSubset="defaultcabs:nuc">0.25 0.06</pos>
+			<maxSize ifSubset="defaultcabs:atomiswave">0.1 0.1</maxSize>
+			<pos ifSubset="defaultcabs:atomiswave">0.25 0.185</pos>
+			<maxSize ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.2 0.1</maxSize>
+			<pos ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.25 0.223</pos>
+			<maxSize if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.2 0.08</maxSize>
+			<pos if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.25 0.06</pos>
+			<size if="{system.theme} == 'atomiswave'">0.1 0.07</size>
+			<pos if="{system.theme} == 'atomiswave'">0.25 0.185</pos>
+			<size if="{system.theme} == 'neogeo64'">0.17 0.14</size>
+			<pos if="{system.theme} == 'neogeo64'">0.25 0.075</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<path>firstfile({game:marquee},{game:wheel})</path>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<visible if="{system.theme} == 'fbneo' || 
+			{system.theme} == 'cps1' || 
+			{system.theme} == 'cps2' || 
+			{system.theme} == 'cps3' || 
+			{system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+		</image>
+		<!-- Fin des marquees automatiques -->
+		<!-- Cabs avec wall originals -->
+		<image name="cabinets" ifSubset="systback:cpscollection" extra="true">
+			<linearSmooth>true</linearSmooth>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<autoFade>false</autoFade>
+			<autoFade ifSubset="systbacktransition:standard">false</autoFade>
+			<path>${globalgamecabs}</path>
+			<path if="{system.theme} == 'fbneo' || 
+			{system.theme} == 'cps1' || 
+			{system.theme} == 'cps2' || 
+			{system.theme} == 'cps3' || 
+			{system.theme} == 'hbmame' ">"${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png"</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png")</visible>
+		</image>
+		<!-- Cabs sans wall : pas d'origine -->
+		<!-- <image name="cabinetssolo" ifSubset="systback:cpscollection" extra="true"> -->
+		<!-- <linearSmooth>true</linearSmooth> -->
+		<!-- <origin>0.5 0.5</origin> -->
+		<!-- <pos>0.298 0.5</pos> -->
+		<!-- <maxSize>1 1</maxSize> -->
+		<!-- <autoFade ifSubset="systbacktransition:standard">false</autoFade> -->
+		<!-- <path>"${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabssolo/" + stem({game:rom}) + ".png"</path> -->
+		<!-- <zIndex>12</zIndex> -->
+		<!-- <scaleOrigin>-0.1 0</scaleOrigin> -->
+		<!-- <visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png")</visible> -->
+		<!-- </image> -->
+		<!-- ##################################################################################################################################################### -->
+		<!-- ############################################ choix 2 : trinitron avec nom system dynamique, sans affiche ############################################ -->
+		<!-- ##################################################################################################################################################### -->
+		<image name="fondsystem" ifSubset="systback:cpssimplenomarquee" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<path>./_viewgame/coinops/defautcabs/trinitronsimple.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<!-- ############# Affichage du logo système #####################		 -->
+		<image name="logosystperregionshadow" ifSubset="systback:cpssimplenomarquee" extra="true">
+			<origin>0.5 0.5</origin>
+			<autoFade>false</autoFade>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
+			<pos>0.247 0.107</pos>
+			<maxSize>0.30 0.15</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>center</horizontalAlignment>
+			<zIndex>200</zIndex>
+			<color>00000090</color>
+		</image>		
+		<image name="logosystperregion" ifSubset="systback:cpssimplenomarquee" extra="true">
+			<origin>0.5 0.5</origin>
+			<autoFade>false</autoFade>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
+			<pos>0.25 0.1</pos>
+			<maxSize>0.30 0.15</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>center</horizontalAlignment>
+			<zIndex>201</zIndex>
+		</image>	
+		<!-- ############# fin Affichage du logo système #####################		 -->
+		<!-- #################################################################################################################################### -->
+		<!-- ############################################ choix 3 Trinitron avec affiche automatique ############################################ -->
+		<!-- #################################################################################################################################### -->
+		<image name="fondsystem" ifSubset="systback:cpssimplemarquee" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<path>./_viewgame/coinops/defautcabs/trinitron.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondaffiche" ifSubset="systback:cpssimplemarquee" extra="true">
+			<!-- <shared>false</shared> -->
+			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg",{game:image})</path>
+			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<color>b7b7b7</color>
+			<colorEnd>FFFFFFDD</colorEnd>
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.33 0.35</maxSize>
+			<pos>0.25 0.15</pos>
+			<origin>0.5 0.5</origin>
+			<saturation>0.5</saturation>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondaffiche2" ifSubset="systback:cpssimplemarquee" extra="true">
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.2 0.15</maxSize>
+			<pos>0.25 0.12</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<path>firstfile({game:marquee},{game:wheel})</path>
+		</image>
+		<!-- #################################################################################################################################### -->
+		<!-- ############################################ choix 4 Fonds type CoinOPS Next ####################################################### -->
+		<!-- #################################################################################################################################### -->
+		<image name="fondsystem" ifSubset="systback:cpsnext2" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<!-- <path>firstfile("${bobmediapath}/_viewgame/coinops/coinopsnext2/${system.theme}.png", -->
+			<!-- "${bobmediapath}/_viewgame/coinops/coinopsnext/${system.theme}.png", -->
+			<path>${bobmediapath}/_viewgame/coinops/defautcabs/3dsimple.png</path>
+			<!-- cab non spécifique par défaut en attendant mieux -->
+			<path>${bobmediapath}/_viewgame/coinops/coinopsnext/${system.theme}.png</path>
+			<!-- cab non spécifique par défaut en attendant mieux -->
+			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopsnext2/${system.theme}.png</path> -->
+			<!-- template issu de coinOPS next 2 -->
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<!-- ############################################ choix 5 Fonds type CoinOPS Next 1 ############################################ -->
+		<!-- <image name="fondsystem" ifSubset="systback:cpsnext" extra="true"> -->
+			<!-- <origin>0.5 0.5</origin> -->
+			<!-- <pos>0.46 0.5</pos> -->
+			<!-- <size>1 1</size> -->
+			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopssimple/3dsimple.png</path> -->
+			<!-- cab non spécifique par défaut en attendant mieux -->
+			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopsnext2/${system.theme}.png</path> -->
+			<!-- cab non spécifique par défaut en attendant mieux -->
+			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopsnext/${system.theme}.png</path> -->
+			<!-- template issu de coinOPS next 2 -->
+			<!-- <zIndex>11</zIndex> -->
+			<!-- <scaleOrigin>-0.1 0</scaleOrigin> -->
+		<!-- </image> -->
+		<!-- ############################################ choix 5 Fonds personnalisés ############################################ -->
+		<image name="fondsystemperso" ifSubset="systback:cpsperso" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<path>${themePath}/_viewgame/coinops/coinopsxlebidul/{game:system:theme}.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondsystem" ifSubset="systback:cpsperso" extra="true">
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopsxlebidul/" + stem({game:system:theme}) + ".png")</visible>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<path>./_viewgame/coinops/defautcabs/trinitronsimple.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="logosytshadow" ifSubset="systback:cpsperso" extra="true">
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopsxlebidul/" + stem({game:system:theme}) + ".png")</visible>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
+			<color>00000090</color>
+			<origin>0.5 0.5</origin>
+			<pos>0.247 0.107</pos>
+			<maxSize>0.30 0.15</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>center</horizontalAlignment>
+			<zIndex>99</zIndex>
+		</image>
+		<image name="logosytemgame" ifSubset="systback:cpsperso" extra="true">
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopsxlebidul/" + stem({game:system:theme}) + ".png")</visible>
+			<origin>0.5 0.5</origin>
+			<pos>0.25 0.1</pos>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
+			<maxSize>0.30 0.15</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>center</horizontalAlignment>
+			<zIndex>99</zIndex>
+		</image>
+		<!-- ########################### Animation des transitions entre les cabs ######################## -->
+		<!-- Storyboard pour transition avec zoom dezoom -->
+		<control name="cabinets,fonddefaut" ifSubset="systbacktransition:scalsyst">
+			<storyboard event="open">
+				<animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+			</storyboard>
+			<storyboard event="activateNext">
+				<animation property="scale" from="1.05" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" duration="1" mode="easeOut"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="scale" from="0.95" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" begin="" duration="1" mode="easeOut"/>
+			</storyboard>
+			<storyboard event="deactivateNext">
+				<animation property="scale" from="1" to="0.95" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="100" duration="150" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="deactivatePrev">
+				<animation property="scale" from="1" to="1.05" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="100" duration="150" mode="easeIn"/>
+			</storyboard>
+		</control>
+		<!-- Storyboard pour transition Standard -->
+		<control name="cabinets,fonddefaut" ifSubset="systbacktransition:standard">
+			<storyboard event="open">
+				<animation property="opacity" to="1" duration="1" mode="linear"/>
+			</storyboard>
+			<storyboard event="activateNext">
+				<animation property="scale" from="1" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" begin="" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="scale" from="1" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" begin="" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="deactivateNext">
+				<animation property="scale" from="1" to="1" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="100" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="deactivatePrev">
+				<animation property="scale" from="1" to="1" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="100" duration="" mode="easeIn"/>
+			</storyboard>
+		</control>
+		<!-- Storyboard pour transition douce -->
+		<control name="cabinets,fonddefaut" ifSubset="systbacktransition:smoothsyst">
+			<storyboard event="open">
+				<animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+			</storyboard>
+			<storyboard event="activateNext">
+				<animation property="opacity" from="0" to="1" duration="300" mode="EaseOutCubic"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="opacity" from="0" to="1" duration="300" mode="EaseOutCubic"/>
+			</storyboard>
+			<storyboard event="deactivateNext">
+				<animation property="zIndex" to="9" begin="0" duration="0" mode="linear"/>
+				<animation property="opacity" to="0" begin="" duration="200" mode="EaseInCubic"/>
+			</storyboard>
+			<storyboard event="deactivatePrev">
+				<animation property="zIndex" to="9" begin="0" duration="0" mode="linear"/>
+				<animation property="opacity" to="0" begin="" duration="200" mode="EaseInCubic"/>
+			</storyboard>
+		</control>
+		<!-- Storyboard pour les fonds par défaut ################################################################# -->
+		<!-- Desactive -->
+		<!-- <control name="fonddefaut" ifSubset="systbacktransition:standard "> -->
+		<!-- <storyboard event="open"> -->
+		<!-- <animation property="opacity" to="1" duration="1" mode="easeIn"/> -->
+		<!-- </storyboard> -->
+		<!-- <storyboard event="activateNext"> -->
+		<!-- <animation property="scale" to="1" begin="" duration="250" mode="easeOut"/> -->
+		<!-- <animation property="opacity" to="1" duration="" mode="easeIn"/> -->
+		<!-- </storyboard> -->
+		<!-- <storyboard event="activatePrev"> -->
+		<!-- <animation property="scale" to="1" begin="" duration="250" mode="easeOut"/> -->
+		<!-- <animation property="opacity" to="1" begin="" duration="" mode="easeIn"/> -->
+		<!-- </storyboard> -->
+		<!-- <storyboard event="deactivateNext"> -->
+		<!-- <animation property="scale" to="1" begin="" duration="250" mode="linear"/> -->
+		<!-- <animation property="opacity" to="0" begin="100" duration="" mode="easeIn"/> -->
+		<!-- </storyboard> -->
+		<!-- <storyboard event="deactivatePrev"> -->
+		<!-- <animation property="scale" to="1" begin="" duration="250" mode="linear"/> -->
+		<!-- <animation property="opacity" to="0" begin="100" duration="" mode="easeIn"/> -->
+		<!-- </storyboard> -->
+		<!-- </control> -->
+		<!-- fin Desactive -->
+		<control name="fonddefaut" if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'" ifSubset="Systbacktransition:Standard">
+			<storyboard event="open">
+				<animation property="opacity" to="1" duration="1" mode="linear"/>
+			</storyboard>
+			<storyboard event="activateNext">
+				<animation property="scale" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="scale" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" begin="" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="deactivateNext">
+				<animation property="scale" to="1" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="50" duration="" mode="linear"/>
+			</storyboard>
+			<storyboard event="deactivatePrev">
+				<animation property="scale" to="1" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="50" duration="" mode="linear"/>
+			</storyboard>
+		</control>
+		<!--FIN Storyboard pour les posters autos ################################################################### -->
+	</customView>
+<!-- ################################################################################################# -->
+<!-- ################################################################################################# -->
+<!-- ###################################     BOXART   ################################################ -->
+<!-- ################################################################################################# -->
+<!-- ################################################################################################# -->
+<!-- ################################################################################################# -->
+		<customView name="coinopsboxart" displayName="${viewchoicecoinopsboxart}" inherits="gamecarousel">
+		<image name="fondmur" extra="true">
+			<path>./_viewgame/coinops/murnuarrondi.png</path>
+			<size>1 1</size>
+			<pos>0.45 0.5</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>2</zIndex>
+			<opacity>1</opacity>
+		</image>
+		<!-- ################################################################################################# -->
+		<!-- ############################################ choix 1 ############################################ -->
+		<!-- ################################################################################################# -->
+		<!-- Si aucun cabinets n'existe, prend le fond système dans coinops collec -->
+		<image name="fondsystem" ifSubset="systback:cpscollection" extra="true">
+			<linearSmooth>true</linearSmooth>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.25</pos>
+			<size>1 1</size>
+			<autoFade>false</autoFade>
+			<path>${intcoinopscollec}</path>
+			<path if="{system.theme} == 'naomi' || 
+			{system.theme} == 'naomi2' || 
+			{system.theme} == 'atomiswave' || 
+			{system.theme} == 'neogeo64' || 
+			{system.theme} == 'ps3' || 
+			{system.theme} == 'ps4' || 
+			{system.theme} == 'ps5' || 
+			{system.theme} == 'xbox360' || 
+			{system.theme} == 'windows' || 
+			{system.theme} == 'windowsbis' || 
+			{system.theme} == 'atarilynx' || 
+			{system.theme} == 'gamegear' || 
+			{system.theme} == 'switch' || 
+			{system.theme} == 'wiiu' || 
+			{system.theme} == 'vircon32' || 
+			{system.theme} == 'boomershooter' || 
+			{system.theme} == 'flash'">${themePath}/_viewgame/coinops/coinopsspec/${system.theme}.png</path>
+			<zIndex>10</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<!-- <visible if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png")</visible> -->
+		</image>
+		<!-- Affiche une Tv et une affiche automatique si le fondsystem n'existe pas et qu'un fichier *.miss existe dans \_viewgame\coinops\coinopscollmiss -->
+		<image name="trinitron" ifSubset="systback:cpscollection" extra="true">
+			<visible>exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<linearSmooth>true</linearSmooth>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.25</pos>
+			<size>1 1</size>
+			<autoFade ifSubset="systbacktransition:standard">false</autoFade>
+			<path>${themePath}/_viewgame/coinops/defautcabs/trinitron.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondtrini1" ifSubset="systback:cpscollection" extra="true">
+			<visible>exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<!-- <shared>false</shared> -->
+			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},{game:thumbnail},{game:boxart},{game:image})</path>
+			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},{game:thumbnail},{game:boxart})</path>
+			<color>b7b7b7</color>
+			<colorEnd>FFFFFFDD</colorEnd>
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.43 1</maxSize>
+			<pos>0.25 0.15</pos>
+			<origin>0.5 0.5</origin>
+			<saturation>0.5</saturation>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondtrini2" ifSubset="systback:cpscollection" extra="true">
+			<visible>exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.15 0.10</maxSize>
+			<pos>0.25 0.06</pos>
+			<maxSize>0.2 0.15</maxSize>
+			<pos>0.25 0.12</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<path>firstfile({game:marquee},{game:wheel})</path>
+		</image>
+		<!-- Affiche le choix de l'utilisateur si le fondsystem ou borne spécifique n'existent pas et qu'un fichier *.miss n'existe pas dans \_viewgame\coinops\coinopscollmiss -->
+		<image name="fonddefaut" ifSubset="systback:cpscollection" extra="true">
+			<linearSmooth>true</linearSmooth>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.25</pos>
+			<size>1 1</size>
+			<autoFade ifSubset="systbacktransition:standard">false</autoFade>
+			<path ifSubset="defaultcabs:trinitron">${themePath}/_viewgame/coinops/defautcabs/trinitron.png</path>
+			<path ifSubset="defaultcabs:viewlixbleue">${themePath}/_viewgame/coinops/defautcabs/bleue.png</path>
+			<path ifSubset="defaultcabs:viewlixjaune">${themePath}/_viewgame/coinops/defautcabs/jaune.png</path>
+			<path ifSubset="defaultcabs:viewlixrose">${themePath}/_viewgame/coinops/defautcabs/rose.png</path>
+			<path ifSubset="defaultcabs:viewlixrouge">${themePath}/_viewgame/coinops/defautcabs/rouge.png</path>
+			<path ifSubset="defaultcabs:viewlixvert">${themePath}/_viewgame/coinops/defautcabs/vert.png</path>
+			<path ifSubset="defaultcabs:viewlixviolet">${themePath}/_viewgame/coinops/defautcabs/violet.png</path>
+			<path ifSubset="defaultcabs:astrocity">${themePath}/_viewgame/coinops/defautcabs/astrocity.png</path>
+			<path ifSubset="defaultcabs:blastcity">${themePath}/_viewgame/coinops/defautcabs/blastcity.png</path>
+			<path ifSubset="defaultcabs:snkneogeo64">${themePath}/_viewgame/coinops/defautcabs/snk.png</path>
+			<path ifSubset="defaultcabs:snkneogeomvs">${themePath}/_viewgame/coinops/defautcabs/snkmvs.png</path>
+			<path ifSubset="defaultcabs:nuc">${themePath}/_viewgame/coinops/defautcabs/naomi.png</path>
+			<path ifSubset="defaultcabs:atomiswave">${themePath}/_viewgame/coinops/defautcabs/atomiswave.png</path>
+			<path ifSubset="defaultcabs:borne3d">${themePath}/_viewgame/coinops/defautcabs/3d.png</path>
+			<path ifSubset="defaultcabs:viewlixnoir">${themePath}/_viewgame/coinops/defautcabs/defautcabs.png</path>
+			<path if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">${themePath}/_viewgame/coinops/defautcabs/naomi.png</path>
+			<path if="{system.theme} == 'neogeo64'">${themePath}/_viewgame/coinops/defautcabs/neogeo64.png</path>
+			<path if="{system.theme} == 'atomiswave'">${themePath}/_viewgame/coinops/defautcabs/atomiswave.png</path>
+			<!-- <path if="${system.manufacturer} == 'Collections'">("${themePath}/_viewgame/coinops/defautcabs/" + stem({game:system:theme}) + ".png")</path> -->
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<visible if="{system.theme} == 'fbneo' || 
+			{system.theme} == 'cps1' || 
+			{system.theme} == 'cps2' || 
+			{system.theme} == 'cps3' || 
+			{system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+		</image>
+		<!-- Marquee de la borne en fonction de la borne par défaut choisies -->
+		<image name="fondposter1" ifSubset="systback:cpscollection" extra="true">
+			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg",{game:image})</path>
+			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<color>b7b7b7</color>
+			<colorEnd>FFFFFFDD</colorEnd>
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.43 1</maxSize>
+			<pos>0.25 0.2</pos>
+			<size ifSubset="defaultcabs:borne3d">0.43 0.45</size>
+			<pos ifSubset="defaultcabs:borne3d">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:trinitron">0.33 0.35</size>
+			<pos ifSubset="defaultcabs:trinitron">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:astrocity">0.2 0.2</size>
+			<pos ifSubset="defaultcabs:astrocity">0.25 0.23</pos>
+			<size ifSubset="defaultcabs:blastcity">0.4 0</size>
+			<pos ifSubset="defaultcabs:blastcity">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:snkneogeo64">0.4 0.3</size>
+			<pos ifSubset="defaultcabs:snkneogeo64">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:snkneogeomvs">0.45 0.35</size>
+			<pos ifSubset="defaultcabs:snkneogeomvs">0.25 0.105</pos>
+			<size ifSubset="defaultcabs:nuc">0.355 0</size>
+			<pos ifSubset="defaultcabs:nuc">0.245 0.105</pos>
+			<size ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.25 0.3</size>
+			<pos ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.25 0.25</pos>
+			<size if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.35 0.3</size>
+			<pos if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.25 0.105</pos>
+			<size if="{system.theme} == 'atomiswave'">0.25 0.3</size>
+			<pos if="{system.theme} == 'atomiswave'">0.25 0.23</pos>
+			<size if="{system.theme} == 'neogeo64'">0.4 0.3</size>
+			<pos if="{system.theme} == 'neogeo64'">0.25 0.15</pos>
+			<origin>0.5 0.5</origin>
+			<saturation>0.5</saturation>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+		</image>
+		<image name="fondposter2" ifSubset="systback:cpscollection" extra="true">
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.15 0.10</maxSize>
+			<pos>0.25 0.06</pos>
+			<maxSize ifSubset="defaultcabs:borne3d">0.2 0.2</maxSize>
+			<pos ifSubset="defaultcabs:borne3d">0.25 0.11</pos>
+			<maxSize ifSubset="defaultcabs:trinitron">0.2 0.15</maxSize>
+			<pos ifSubset="defaultcabs:trinitron">0.25 0.12</pos>
+			<maxSize ifSubset="defaultcabs:astrocity">0.1 0.1</maxSize>
+			<pos ifSubset="defaultcabs:astrocity">0.25 0.2</pos>
+			<maxSize ifSubset="defaultcabs:blastcity">0.2 0.12</maxSize>
+			<pos ifSubset="defaultcabs:blastcity">0.25 0.06</pos>
+			<maxSize ifSubset="defaultcabs:snkneogeo64">0.17 0.14</maxSize>
+			<pos ifSubset="defaultcabs:snkneogeo64">0.25 0.075</pos>
+			<maxSize ifSubset="defaultcabs:snkneogeomvs">0.2 0.2</maxSize>
+			<pos ifSubset="defaultcabs:snkneogeomvs">0.25 0.105</pos>
+			<maxSize ifSubset="defaultcabs:nuc">0.2 0.08</maxSize>
+			<pos ifSubset="defaultcabs:nuc">0.25 0.06</pos>
+			<maxSize ifSubset="defaultcabs:atomiswave">0.1 0.1</maxSize>
+			<pos ifSubset="defaultcabs:atomiswave">0.25 0.185</pos>
+			<maxSize ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.2 0.1</maxSize>
+			<pos ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.25 0.223</pos>
+			<maxSize if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.2 0.08</maxSize>
+			<pos if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.25 0.06</pos>
+			<size if="{system.theme} == 'atomiswave'">0.1 0.07</size>
+			<pos if="{system.theme} == 'atomiswave'">0.25 0.185</pos>
+			<size if="{system.theme} == 'neogeo64'">0.17 0.14</size>
+			<pos if="{system.theme} == 'neogeo64'">0.25 0.075</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<path>firstfile({game:marquee},{game:wheel})</path>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<visible if="{system.theme} == 'fbneo' || 
+			{system.theme} == 'cps1' || 
+			{system.theme} == 'cps2' || 
+			{system.theme} == 'cps3' || 
+			{system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
+			!exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+		</image>
+		<!-- Fin des marquees automatiques -->
+		<!-- Cabs avec wall originals -->
+		<image name="cabinets" ifSubset="systback:cpscollection" extra="true">
+			<linearSmooth>true</linearSmooth>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.25</pos>
+			<size>1 1</size>
+			<autoFade>false</autoFade>
+			<autoFade ifSubset="systbacktransition:standard">false</autoFade>
+			<path>${globalgamecabs}</path>
+			<path if="{system.theme} == 'fbneo' || 
+			{system.theme} == 'cps1' || 
+			{system.theme} == 'cps2' || 
+			{system.theme} == 'cps3' || 
+			{system.theme} == 'hbmame' ">"${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png"</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png")</visible>
+		</image>
+		<!-- Cabs sans wall : pas d'origine -->
+		<!-- <image name="cabinetssolo" ifSubset="systback:cpscollection" extra="true"> -->
+		<!-- <linearSmooth>true</linearSmooth> -->
+		<!-- <origin>0.5 0.5</origin> -->
+		<!-- <pos>0.298 0.5</pos> -->
+		<!-- <maxSize>1 1</maxSize> -->
+		<!-- <autoFade ifSubset="systbacktransition:standard">false</autoFade> -->
+		<!-- <path>"${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabssolo/" + stem({game:rom}) + ".png"</path> -->
+		<!-- <zIndex>12</zIndex> -->
+		<!-- <scaleOrigin>-0.1 0</scaleOrigin> -->
+		<!-- <visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png")</visible> -->
+		<!-- </image> -->
+		<!-- ##################################################################################################################################################### -->
+		<!-- ############################################ choix 2 : trinitron avec nom system dynamique, sans affiche ############################################ -->
+		<!-- ##################################################################################################################################################### -->
+		<image name="fondsystem" ifSubset="systback:cpssimplenomarquee" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<path>./_viewgame/coinops/defautcabs/trinitronsimple.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<!-- ############# Affichage du logo système #####################		 -->
+		<image name="logosystperregionshadow" ifSubset="systback:cpssimplenomarquee" extra="true">
+			<origin>0.5 0.5</origin>
+			<autoFade>false</autoFade>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
+			<pos>0.247 0.107</pos>
+			<maxSize>0.30 0.15</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>center</horizontalAlignment>
+			<zIndex>200</zIndex>
+			<color>00000090</color>
+		</image>		
+		<image name="logosystperregion" ifSubset="systback:cpssimplenomarquee" extra="true">
+			<origin>0.5 0.5</origin>
+			<autoFade>false</autoFade>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
+			<pos>0.25 0.1</pos>
+			<maxSize>0.30 0.15</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>center</horizontalAlignment>
+			<zIndex>201</zIndex>
+		</image>	
+		<!-- ############# fin Affichage du logo système #####################		 -->
+		<!-- #################################################################################################################################### -->
+		<!-- ############################################ choix 3 Trinitron avec affiche automatique ############################################ -->
+		<!-- #################################################################################################################################### -->
+		<image name="fondsystem" ifSubset="systback:cpssimplemarquee" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<path>./_viewgame/coinops/defautcabs/trinitron.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondaffiche" ifSubset="systback:cpssimplemarquee" extra="true">
+			<!-- <shared>false</shared> -->
+			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg",{game:image})</path>
+			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<color>b7b7b7</color>
+			<colorEnd>FFFFFFDD</colorEnd>
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.33 0.35</maxSize>
+			<pos>0.25 0.15</pos>
+			<origin>0.5 0.5</origin>
+			<saturation>0.5</saturation>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondaffiche2" ifSubset="systback:cpssimplemarquee" extra="true">
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.2 0.15</maxSize>
+			<pos>0.25 0.12</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<path>firstfile({game:marquee},{game:wheel})</path>
+		</image>
+		<!-- #################################################################################################################################### -->
+		<!-- ############################################ choix 4 Fonds type CoinOPS Next ####################################################### -->
+		<!-- #################################################################################################################################### -->
+		<image name="fondsystem" ifSubset="systback:cpsnext2" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<!-- <path>firstfile("${bobmediapath}/_viewgame/coinops/coinopsnext2/${system.theme}.png", -->
+			<!-- "${bobmediapath}/_viewgame/coinops/coinopsnext/${system.theme}.png", -->
+			<path>${bobmediapath}/_viewgame/coinops/defautcabs/3dsimple.png</path>
+			<!-- cab non spécifique par défaut en attendant mieux -->
+			<path>${bobmediapath}/_viewgame/coinops/coinopsnext/${system.theme}.png</path>
+			<!-- cab non spécifique par défaut en attendant mieux -->
+			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopsnext2/${system.theme}.png</path> -->
+			<!-- template issu de coinOPS next 2 -->
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<!-- ############################################ choix 5 Fonds type CoinOPS Next 1 ############################################ -->
+		<!-- <image name="fondsystem" ifSubset="systback:cpsnext" extra="true"> -->
+			<!-- <origin>0.5 0.5</origin> -->
+			<!-- <pos>0.46 0.5</pos> -->
+			<!-- <size>1 1</size> -->
+			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopssimple/3dsimple.png</path> -->
+			<!-- cab non spécifique par défaut en attendant mieux -->
+			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopsnext2/${system.theme}.png</path> -->
+			<!-- cab non spécifique par défaut en attendant mieux -->
+			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopsnext/${system.theme}.png</path> -->
+			<!-- template issu de coinOPS next 2 -->
+			<!-- <zIndex>11</zIndex> -->
+			<!-- <scaleOrigin>-0.1 0</scaleOrigin> -->
+		<!-- </image> -->
+		<!-- ############################################ choix 5 Fonds personnalisés ############################################ -->
+		<image name="fondsystemperso" ifSubset="systback:cpsperso" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<path>${themePath}/_viewgame/coinops/coinopsxlebidul/{game:system:theme}.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fondsystem" ifSubset="systback:cpsperso" extra="true">
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopsxlebidul/" + stem({game:system:theme}) + ".png")</visible>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<path>./_viewgame/coinops/defautcabs/trinitronsimple.png</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="logosytshadow" ifSubset="systback:cpsperso" extra="true">
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopsxlebidul/" + stem({game:system:theme}) + ".png")</visible>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
+			<color>00000090</color>
+			<origin>0.5 0.5</origin>
+			<pos>0.247 0.107</pos>
+			<maxSize>0.30 0.15</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>center</horizontalAlignment>
+			<zIndex>99</zIndex>
+		</image>
+		<image name="logosytemgame" ifSubset="systback:cpsperso" extra="true">
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopsxlebidul/" + stem({game:system:theme}) + ".png")</visible>
+			<origin>0.5 0.5</origin>
+			<pos>0.25 0.1</pos>
+			<path>firstfile("${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + "-" + {game:region} + ".png",
+			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
+			<maxSize>0.30 0.15</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>center</horizontalAlignment>
+			<zIndex>99</zIndex>
+		</image>
+		<!-- ########################### Animation des transitions entre les cabs ######################## -->
+		<!-- Storyboard pour transition avec zoom dezoom -->
+		<control name="cabinets,fonddefaut" ifSubset="systbacktransition:scalsyst">
+			<storyboard event="open">
+				<animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+			</storyboard>
+			<storyboard event="activateNext">
+				<animation property="scale" from="1.05" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" duration="1" mode="easeOut"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="scale" from="0.95" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" begin="" duration="1" mode="easeOut"/>
+			</storyboard>
+			<storyboard event="deactivateNext">
+				<animation property="scale" from="1" to="0.95" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="100" duration="150" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="deactivatePrev">
+				<animation property="scale" from="1" to="1.05" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="100" duration="150" mode="easeIn"/>
+			</storyboard>
+		</control>
+		<!-- Storyboard pour transition Standard -->
+		<control name="cabinets,fonddefaut" ifSubset="systbacktransition:standard">
+			<storyboard event="open">
+				<animation property="opacity" to="1" duration="1" mode="linear"/>
+			</storyboard>
+			<storyboard event="activateNext">
+				<animation property="scale" from="1" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" begin="" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="scale" from="1" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" begin="" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="deactivateNext">
+				<animation property="scale" from="1" to="1" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="100" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="deactivatePrev">
+				<animation property="scale" from="1" to="1" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="100" duration="" mode="easeIn"/>
+			</storyboard>
+		</control>
+		<!-- Storyboard pour transition douce -->
+		<control name="cabinets,fonddefaut" ifSubset="systbacktransition:smoothsyst">
+			<storyboard event="open">
+				<animation property="opacity" from="0" to="1" duration="1" mode="linear"/>
+			</storyboard>
+			<storyboard event="activateNext">
+				<animation property="opacity" from="0" to="1" duration="300" mode="EaseOutCubic"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="opacity" from="0" to="1" duration="300" mode="EaseOutCubic"/>
+			</storyboard>
+			<storyboard event="deactivateNext">
+				<animation property="zIndex" to="9" begin="0" duration="0" mode="linear"/>
+				<animation property="opacity" to="0" begin="" duration="200" mode="EaseInCubic"/>
+			</storyboard>
+			<storyboard event="deactivatePrev">
+				<animation property="zIndex" to="9" begin="0" duration="0" mode="linear"/>
+				<animation property="opacity" to="0" begin="" duration="200" mode="EaseInCubic"/>
+			</storyboard>
+		</control>
+		<!-- Storyboard pour les fonds par défaut ################################################################# -->
+		<control name="fonddefaut" if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'" ifSubset="Systbacktransition:Standard">
+			<storyboard event="open">
+				<animation property="opacity" to="1" duration="1" mode="linear"/>
+			</storyboard>
+			<storyboard event="activateNext">
+				<animation property="scale" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="scale" to="1" begin="" duration="250" mode="easeOut"/>
+				<animation property="opacity" to="1" begin="" duration="" mode="easeIn"/>
+			</storyboard>
+			<storyboard event="deactivateNext">
+				<animation property="scale" to="1" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="50" duration="" mode="linear"/>
+			</storyboard>
+			<storyboard event="deactivatePrev">
+				<animation property="scale" to="1" begin="" duration="250" mode="linear"/>
+				<animation property="opacity" to="0" begin="50" duration="" mode="linear"/>
+			</storyboard>
+		</control>
+		<!--FIN Storyboard pour les posters autos ################################################################### -->
+	</customView>
+</theme>

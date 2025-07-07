@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<!-- Logo éditeur + ombre portée désactivable : apparait dans MetaDAll|MetaDAllnolang|MetaDAllNolangNoName Disparait dans MetaDBasicnoEd -->
+		<image name="dropshadow_logosytemgame" extra="true">
+			<autoFade>false</autoFade>
+			<visible ifSubset="metadatajeux:metadall|metadallnolang|metadallnolangnoname">true</visible>
+			<visible ifSubset="metadatajeux:metadbasicnoed">false</visible>
+			<path>firstfile(${firstmanufacturer},${firstgamesyst})</path>
+			<path if="${system.manufacturer} == 'Collections'">${extgamesyst}</path>
+			<pos ifHelpPrompts="false">0.493 0.962</pos>
+			<pos ifHelpPrompts="true">0.494 0.923</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.08 0.07</maxSize>
+			<color>00000090</color>
+			<zIndex>305</zIndex>
+			<opacity>1</opacity>
+		</image>
+		<image name="logosytemgamelist" extra="true">
+			<autoFade>false</autoFade>
+			<visible ifSubset="metadatajeux:metadall|metadallnolang|metadallnolangnoname">true</visible>
+			<visible ifSubset="metadatajeux:metadbasicnoed">false</visible>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.495 0.96</pos>
+			<pos ifHelpPrompts="true">0.495 0.92</pos>
+			<path>firstfile(${firstmanufacturer},${firstgamesyst})</path>
+			<path if="${system.manufacturer} == 'Collections'">${extgamesyst}</path>
+			<maxSize>0.08 0.07</maxSize>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>right</horizontalAlignment>
+			<verticalAlignment>bottom</verticalAlignment>
+			<opacity>1</opacity>
+			<zIndex>305</zIndex>
+		</image>
+		<!-- Metadata au format texte désactivable -->
+		<text name="game_name" extra="true">
+			<visible ifSubset="metadatajeux:metadallnolangnoname|metadbasicnoed">false</visible>
+			<visible ifSubset="metadatajeux:metadall|metadallnolang">true</visible>
+			<text>{game:name}</text>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<fontSize>0.019</fontSize>
+			<color>ffffffff</color>
+			<pos ifHelpPrompts="true">0.6465 0.89</pos>
+			<pos ifHelpPrompts="false">0.6465 0.932</pos>
+			<pos ifHelpPrompts="false" ifSubset="metadatajeux:metadallnolang">0.6465 0.95</pos>
+			<pos ifHelpPrompts="true" ifSubset="metadatajeux:metadallnolang">0.6465 0.91</pos>
+			<origin>0.5 0.5</origin>
+			<size>0.21 0.02</size>
+			<alignment>left</alignment>
+			<glowColor>00000016</glowColor>
+			<glowSize>3</glowSize>
+			<opacity>0.7</opacity>
+			<zIndex>305</zIndex>
+		</text>
+		<text name="langue" extra="true">
+			<visible ifSubset="metadatajeux:metadallnolang|metadallnolangnoname|metadbasicnoed">false</visible>
+			<visible ifSubset="metadatajeux:metadbasicnamelang|metadall">true</visible>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<color>ffffffff</color>
+			<pos ifHelpPrompts="true">0.542 0.885</pos>
+			<pos ifHelpPrompts="false">0.542 0.925</pos>
+			<size>0.4 0.05</size>
+			<text>${languesdispo} ({game:lang})</text>
+			<glowColor>00000016</glowColor>
+			<glowSize>3</glowSize>
+			<alignment>left</alignment>
+			<fontSize>0.014</fontSize>
+			<zIndex>305</zIndex>
+			<opacity>0.7</opacity>
+		</text>
+		<!-- Début des Metadata sur fond rectangle noir non désactivables -->
+		<image name="black_nbrepartie" extra="true">
+			<tile>false</tile>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.575 0.98</pos>
+			<pos ifHelpPrompts="true">0.575 0.94</pos>
+			<maxSize>0.085 0.085</maxSize>
+			<zIndex>305</zIndex>
+			<opacity>0.7</opacity>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>left</horizontalAlignment>
+			<path>${themePath}/_viewgameoption/gl-coinopsnext/images/bvierge.png</path>
+		</image>
+		<text name="preset_playcount" extra="true">
+			<visible>{game:playcount} &gt; 0 ? 1 : 0</visible>
+			<color>FFFFFF</color>
+			<text>{game:playcount} ${playcount}</text>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.575 0.979</pos>
+			<pos ifHelpPrompts="true">0.575 0.939</pos>
+			<size>0.07 0.035</size>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<opacity>0.5</opacity>
+		</text>
+		<text name="preset_noplaycount" extra="true">
+			<visible>{game:playcount} &gt; 0 ? 0 : 1</visible>
+			<text>${noplaycount}</text>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.575 0.979</pos>
+			<pos ifHelpPrompts="true">0.575 0.939</pos>
+			<size>0.1 0.035</size>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<color>ffffff</color>
+			<opacity>0.5</opacity>
+		</text>
+		<image name="black_date" extra="true">
+			<tile>false</tile>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.647 0.98</pos>
+			<pos ifHelpPrompts="true">0.647 0.94</pos>
+			<maxSize>0.085 0.085</maxSize>
+			<zIndex>305</zIndex>
+			<opacity>0.7</opacity>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>left</horizontalAlignment>
+			<path>${themePath}/_viewgameoption/gl-coinopsnext/images/bvierge.png</path>
+		</image>
+		<text name="preset_releasedate" extra="true">
+			<visible>{game:releaseyear} &gt; 0 ? 1 : 0</visible>
+			<color>FFFFFF</color>
+			<text>{game:releaseyear}</text>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.647 0.979</pos>
+			<pos ifHelpPrompts="true">0.647 0.939</pos>
+			<size>0.05 0.035</size>
+			<forceUppercase>0</forceUppercase>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<opacity>0.5</opacity>
+		</text>
+		<text name="preset_noreleasedate" extra="true">
+			<visible>{game:releaseyear} &gt; 0 ? 0 : 1</visible>
+			<color>FFFFFF</color>
+			<text>${nodates}</text>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.647 0.979</pos>
+			<pos ifHelpPrompts="true">0.647 0.939</pos>
+			<size>0.1 0.035</size>
+			<forceUppercase>0</forceUppercase>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<opacity>0.5</opacity>
+		</text>
+		<image name="black_player" extra="true">
+			<tile>false</tile>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.719 0.98</pos>
+			<pos ifHelpPrompts="true">0.719 0.94</pos>
+			<maxSize>0.085 0.085</maxSize>
+			<zIndex>305</zIndex>
+			<opacity>0.7</opacity>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>left</horizontalAlignment>
+			<path>${themePath}/_viewgameoption/gl-coinopsnext/images/bvierge.png</path>
+		</image>
+		<text name="preset_players" extra="true">
+			<visible>{game:players} &gt; 0 ? 1 : 0</visible>
+			<text>{game:players} ${players}</text>
+			<color>FFFFFF</color>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.718 0.979</pos>
+			<pos ifHelpPrompts="true">0.718 0.939</pos>
+			<size>0.063 0.035</size>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<opacity>0.5</opacity>
+		</text>
+		<text name="preset_noplayers" extra="true">
+			<visible>{game:players} &gt; 0 ? 0 : 1</visible>
+			<text>${noplayerdata}</text>
+			<color>FFFFFF</color>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.718 0.979</pos>
+			<pos ifHelpPrompts="true">0.718 0.939</pos>
+			<size>0.075 0.035</size>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<opacity>0.5</opacity>
+		</text>
+		<image name="notation" extra="true">
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.791 0.98</pos>
+			<pos ifHelpPrompts="true">0.791 0.94</pos>
+			<maxSize>0.085 0.085</maxSize>
+			<zIndex>305</zIndex>
+			<opacity>0.7</opacity>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>left</horizontalAlignment>
+			<path>${themePath}/_viewgameoption/gl-coinopsnext/images/bvierge.png</path>
+		</image>
+		<rating name="md_rating">
+			<visible>true</visible>
+			<pos ifHelpPrompts="false">0.764 0.969</pos>
+			<pos ifHelpPrompts="true">0.764 0.929</pos>
+			<size>0.005 0.02</size>
+			<zIndex>305</zIndex>
+			<color>FFFFFF</color>
+			<unfilledColor>808080</unfilledColor>
+			<unfilledPath>:/star_filled.svg</unfilledPath>
+			<opacity>0.7</opacity>
+		</rating>
+		<image name="tempsjeux" extra="true">
+			<tile>false</tile>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.864 0.98</pos>
+			<pos ifHelpPrompts="true">0.864 0.94</pos>
+			<maxSize>0.085 0.085</maxSize>
+			<zIndex>305</zIndex>
+			<opacity>0.7</opacity>
+			<linearSmooth>true</linearSmooth>
+			<horizontalAlignment>left</horizontalAlignment>
+			<path>${themePath}/_viewgameoption/gl-coinopsnext/images/bvierge.png</path>
+		</image>
+		<text name="preset_gametime" extra="true">
+			<text>expandseconds({game:gametime})</text>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.864 0.979</pos>
+			<pos ifHelpPrompts="true">0.864 0.939</pos>
+			<size>0.065 0.035</size>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<color>ffffff</color>
+			<opacity>0.5</opacity>
+		</text>
+		<text name="preset_nogametime" extra="true">
+			<visible>{game:gametime} &gt; 0 ? 0 : 1</visible>
+			<text>${nogametime}</text>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.8635 0.979</pos>
+			<pos ifHelpPrompts="true">0.8635 0.939</pos>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<color>ffffff</color>
+			<opacity>0.5</opacity>
+		</text>
+	</customView>
+</theme>

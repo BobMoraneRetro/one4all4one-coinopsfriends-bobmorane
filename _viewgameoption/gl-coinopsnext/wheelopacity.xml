@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<!--custom-->
+		<gamecarousel name="gamecarousel">
+			<minLogoOpacity ifSubset="wheelopacity:notransp">1.0</minLogoOpacity>
+			<minLogoOpacity ifSubset="wheelopacity:vis0">0</minLogoOpacity>
+			<minLogoOpacity ifSubset="wheelopacity:vis20">0.2</minLogoOpacity>
+			<minLogoOpacity ifSubset="wheelopacity:vis40">0.4</minLogoOpacity>
+			<minLogoOpacity ifSubset="wheelopacity:vis60">0.6</minLogoOpacity>
+			<minLogoOpacity ifSubset="wheelopacity:vis80">0.8</minLogoOpacity>
+		</gamecarousel>
+		<gamecarousel ifSubset="wheelopacity:vis0" name="gamecarousel">
+			<pos ifHelpPrompts="false">0.50 0.37</pos>
+			<pos ifHelpPrompts="true">0.50 0.33</pos>
+			<zIndex>51</zIndex>
+		</gamecarousel>
+	</customView>
+</theme>

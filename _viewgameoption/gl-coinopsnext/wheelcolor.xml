@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<image name="gamecarouselLogo">
+			<storyboard event="activate">
+				<animation property="saturation" to="1" begin="" duration="150" mode="Linear"/>
+			</storyboard>
+			<storyboard event="scroll">
+				<animation property="saturation" to="0" begin="" duration="0" mode="Linear"/>
+			</storyboard>
+			<storyboard event="deactivate">
+				<animation property="saturation" to="0" begin="" duration="150" mode="Linear"/>
+			</storyboard>
+		</image>
+	</customView>
+</theme>

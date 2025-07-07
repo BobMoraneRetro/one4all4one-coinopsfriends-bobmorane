@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<!-- ################### Affichage des hi-score ######################## -->
+		<gameextras name="gameextras">
+			<path>${bobmediapath}/hiscore</path>
+		</gameextras>
+		<!-- ################### Affichage dans un cadre en bas à droite ######################## -->
+		<image name="rankingcadre" extra="true">
+			<!-- <visible if="{system.theme} != 'mame'">false</visible> -->
+			<visible>{game:system:theme} == 'mame'</visible>
+			<path>${themePath}/_viewgame/coinops/rankvierge.png</path>
+			<pos>0.95 0.955</pos>
+			<color>FFFFFF</color>
+			<origin>0.5 1</origin>
+			<!-- <maxSize>0.2 0.2</maxSize> -->
+			<size ifSubset="hiscoretype:top5">0.09 0.15</size>
+			<maxSize ifSubset="hiscoretype:allrank">0.2 0.2</maxSize>
+			<size ifSubset="hiscoretype:top3">0.09 0.1</size>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<zIndex>305</zIndex>
+			<opacity>0</opacity>
+		</image>
+		<!-- ################### Affichage en haut au centre ######################## -->
+		<!-- ################### Affichage en haut au centre ######################## -->
+		<text name="Top3" extra="true">
+			<visible ifSubset="hiscore:inactif">false</visible>
+			<visible>{game:system:theme} == 'mame'</visible>
+			<text ifSubset="hiscoretype:top5">${top5}</text>
+			<text ifSubset="hiscoretype:allrank">${allrank}</text>
+			<text ifSubset="hiscoretype:top3">${top3}</text>
+			<!-- <text if="{system.theme} != 'mame'"/> -->
+			<fontPath>${themePath}/_viewgame/traviolta/impact.ttf</fontPath>
+			<pos>0.9 0.73</pos>
+			<offsetY ifSubset="hiscoretype:top5">0.05</offsetY>
+			<offsetY ifSubset="hiscoretype:top3">0.1</offsetY>
+			<size>0.1 0.05</size>
+			<fontSize>0.020</fontSize>
+			<color>ffffff</color>
+			<glowColor>00000066</glowColor>
+			<glowSize>2</glowSize>
+			<alignment>center</alignment>
+			<lineSpacing>1.5</lineSpacing>
+			<zIndex>999</zIndex>
+			<opacity>0</opacity>
+		</text>
+		<text name="noscore" extra="true">
+			<visible ifSubset="hiscore:inactif">false</visible>
+			<visible>{game:system:theme} == 'mame'  &amp;&amp; !exists("${bobmediapath}/hiscore/" + stem({game:rom}) + ".xml")</visible>
+			<text ifSubset="hiscoretype:top5|allrank|top3">${nohiscore}</text>
+			<fontPath>${themePath}/_viewgame/traviolta/impact.ttf</fontPath>
+			<pos>0.9 0.825</pos>
+			<offsetY ifSubset="hiscoretype:top5">0.03</offsetY>
+			<offsetY ifSubset="hiscoretype:top3">0.055</offsetY>
+			<size>0.1 0.05</size>
+			<fontSize>0.020</fontSize>
+			<color>ffffff</color>
+			<glowColor>00000066</glowColor>
+			<glowSize>2</glowSize>
+			<alignment>center</alignment>
+			<lineSpacing>1.5</lineSpacing>
+			<zIndex>999</zIndex>
+			<opacity>0</opacity>
+		</text>
+		<text name="hiscoreline1" extra="true">
+			<visible ifSubset="hiscore:inactif">false</visible>
+			<visible ifSubset="hiscoretype:top5|allrank|top3">true</visible>
+			<pos>0.9 0.76</pos>
+			<offsetY ifSubset="hiscoretype:top5">0.049</offsetY>
+			<!-- <offsetY ifSubset="hiscoretype:allrank">0.1</offsetY> -->
+			<offsetY ifSubset="hiscoretype:top3">0.098</offsetY>
+			<size>0.1 0.05</size>
+			<fontSize>0.015</fontSize>
+			<color>ffffff</color>
+			<glowColor>00000066</glowColor>
+			<glowSize>2</glowSize>
+			<alignment>left</alignment>
+			<lineSpacing>1.5</lineSpacing>
+			<zIndex>999</zIndex>
+		</text>
+		<text name="hiscoreline2" extra="true">
+			<visible ifSubset="hiscore:inactif">false</visible>
+			<visible ifSubset="hiscoretype:top5|allrank|top3">true</visible>
+			<pos>0.9 0.785</pos>
+			<offsetY ifSubset="hiscoretype:top5">0.049</offsetY>
+			<!-- <offsetY ifSubset="hiscoretype:allrank">0.1</offsetY> -->
+			<offsetY ifSubset="hiscoretype:top3">0.098</offsetY>
+			<size>0.1 0.05</size>
+			<fontSize>0.015</fontSize>
+			<color>ffffff</color>
+			<glowColor>00000066</glowColor>
+			<glowSize>2</glowSize>
+			<alignment>left</alignment>
+			<lineSpacing>1.5</lineSpacing>
+			<zIndex>999</zIndex>
+		</text>
+		<text name="hiscoreline3" extra="true">
+			<visible ifSubset="hiscore:inactif">false</visible>
+			<visible ifSubset="hiscoretype:top5|allrank|top3">true</visible>
+			<pos>0.9 0.81</pos>
+			<offsetY ifSubset="hiscoretype:top5">0.049</offsetY>
+			<!-- <offsetY ifSubset="hiscoretype:allrank">0.1</offsetY> -->
+			<offsetY ifSubset="hiscoretype:top3">0.098</offsetY>
+			<size>0.1 0.05</size>
+			<fontSize>0.015</fontSize>
+			<color>ffffff</color>
+			<glowColor>00000066</glowColor>
+			<glowSize>2</glowSize>
+			<alignment>left</alignment>
+			<lineSpacing>1.5</lineSpacing>
+			<zIndex>999</zIndex>
+		</text>
+		<text name="hiscoreline4" extra="true">
+			<visible ifSubset="hiscore:inactif">false</visible>
+			<visible ifSubset="hiscoretype:top5|allrank">true</visible>
+			<visible ifSubset="hiscoretype:top3">false</visible>
+			<pos>0.9 0.835</pos>
+			<offsetY ifSubset="hiscoretype:top5">0.049</offsetY>
+			<!-- <offsetY ifSubset="hiscoretype:allrank">0.1</offsetY> -->
+			<size>0.1 0.05</size>
+			<fontSize>0.015</fontSize>
+			<color>ffffff</color>
+			<glowColor>00000066</glowColor>
+			<glowSize>2</glowSize>
+			<alignment>left</alignment>
+			<lineSpacing>1.5</lineSpacing>
+			<zIndex>999</zIndex>
+		</text>
+		<text name="hiscoreline5" extra="true">
+			<visible ifSubset="hiscore:inactif">false</visible>
+			<visible ifSubset="hiscoretype:top5|allrank">true</visible>
+			<visible ifSubset="hiscoretype:top3">false</visible>
+			<pos>0.9 0.86</pos>
+			<offsetY ifSubset="hiscoretype:top5">0.049</offsetY>
+			<!-- <offsetY ifSubset="hiscoretype:allrank">0.1</offsetY> -->
+			<size>0.1 0.05</size>
+			<fontSize>0.015</fontSize>
+			<color>ffffff</color>
+			<glowColor>00000066</glowColor>
+			<glowSize>2</glowSize>
+			<alignment>left</alignment>
+			<lineSpacing>1.5</lineSpacing>
+			<zIndex>999</zIndex>
+		</text>
+		<text name="hiscoreline6" extra="true">
+			<visible ifSubset="hiscore:inactif">false</visible>
+			<visible ifSubset="hiscoretype:allrank">true</visible>
+			<visible ifSubset="hiscoretype:top5|top3">false</visible>
+			<pos>0.9 0.885</pos>
+			<size>0.1 0.05</size>
+			<fontSize>0.015</fontSize>
+			<color>ffffff</color>
+			<glowColor>00000066</glowColor>
+			<glowSize>2</glowSize>
+			<alignment>left</alignment>
+			<lineSpacing>1.5</lineSpacing>
+			<zIndex>999</zIndex>
+		</text>
+		<text name="hiscoreline7" extra="true">
+			<visible ifSubset="hiscore:inactif">false</visible>
+			<visible ifSubset="hiscoretype:allrank">true</visible>
+			<visible ifSubset="hiscoretype:top5|top3">false</visible>
+			<pos>0.9 0.91</pos>
+			<size>0.1 0.05</size>
+			<fontSize>0.015</fontSize>
+			<color>ffffff</color>
+			<glowColor>00000066</glowColor>
+			<glowSize>2</glowSize>
+			<alignment>left</alignment>
+			<lineSpacing>1.5</lineSpacing>
+			<zIndex>999</zIndex>
+		</text>
+		<!-- <text name="hiscoreline8" extra="true"> -->
+		<!-- <visible ifSubset="hiscore:inactif">false</visible> -->
+		<!-- <visible ifSubset="hiscoretype:allrank">true</visible> -->
+		<!-- <visible ifSubset="hiscoretype:top5|top3">false</visible> -->
+		<!-- <pos>0.6 0.05</pos> -->
+		<!-- <size>0.284 0.11</size> -->
+		<!-- <fontSize>0.020</fontSize> -->
+		<!-- <color>ffffff</color> -->
+		<!-- <glowColor>00000066</glowColor> -->
+		<!-- <glowSize>2</glowSize> -->
+		<!-- <alignment>left</alignment> -->
+		<!-- <lineSpacing>1.5</lineSpacing> -->
+		<!-- <zIndex>999</zIndex> -->
+		<!-- </text> -->
+		<!-- <text name="hiscoreline9" extra="true"> -->
+		<!-- <visible ifSubset="hiscore:inactif">false</visible> -->
+		<!-- <visible ifSubset="hiscoretype:allrank">true</visible> -->
+		<!-- <visible ifSubset="hiscoretype:top5|top3">false</visible> -->
+		<!-- <pos>0.6 0.075</pos> -->
+		<!-- <size>0.284 0.11</size> -->
+		<!-- <fontSize>0.020</fontSize> -->
+		<!-- <color>ffffff</color> -->
+		<!-- <glowColor>00000066</glowColor> -->
+		<!-- <glowSize>2</glowSize> -->
+		<!-- <alignment>left</alignment> -->
+		<!-- <lineSpacing>1.5</lineSpacing> -->
+		<!-- <zIndex>999</zIndex> -->
+		<!-- </text> -->
+		<!-- <text name="hiscoreline10" extra="true"> -->
+		<!-- <visible ifSubset="hiscore:inactif">false</visible> -->
+		<!-- <visible ifSubset="hiscoretype:allrank">true</visible> -->
+		<!-- <visible ifSubset="hiscoretype:top5|top3">false</visible> -->
+		<!-- <pos>0.6 0.1</pos> -->
+		<!-- <size>0.284 0.11</size> -->
+		<!-- <fontSize>0.020</fontSize> -->
+		<!-- <color>ffffff</color> -->
+		<!-- <glowColor>00000066</glowColor> -->
+		<!-- <glowSize>2</glowSize> -->
+		<!-- <alignment>left</alignment> -->
+		<!-- <lineSpacing>1.5</lineSpacing> -->
+		<!-- <zIndex>999</zIndex> -->
+		<!-- </text> -->
+		<control name="hiscoreline1, hiscoreline2, hiscoreline3, hiscoreline4, hiscoreline5, hiscoreline6, hiscoreline7, hiscoreline8, hiscoreline9, hiscoreline10">
+			<color>ffffff</color>
+			<fontPath>${themePath}/_viewgame/traviolta/impact.ttf</fontPath>
+			<!-- <opacity>0.7</opacity> -->
+			<alignment>center</alignment>
+			<opacity>0</opacity>
+		</control>
+		<control name="hiscoreline1, hiscoreline2, hiscoreline3, hiscoreline4, hiscoreline5, hiscoreline6, hiscoreline7, hiscoreline8, hiscoreline9, hiscoreline10, rankingcadre, Top3, noscore">
+			<storyboard event="open">
+				<animation property="opacity" from="0" to="0.7" begin="500" duration="1500" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="activateNext">
+				<animation property="opacity" from="0" to="0.7" begin="500" duration="1500" mode="EaseIn"/>
+			</storyboard>
+			<storyboard event="activatePrev">
+				<animation property="opacity" from="0" to="0.7" begin="500" duration="1500" mode="EaseIn"/>
+			</storyboard>
+			<!-- <storyboard event="deactivateNext"> -->
+			<!-- <animation property="opacity" to="0" begin="" duration="0" mode="EaseOut"/> -->
+			<!-- </storyboard> -->
+			<!-- <storyboard event="deactivatePrev"> -->
+			<!-- <animation property="opacity" to="0" begin="" duration="0" mode="EaseOut"/> -->
+			<!-- </storyboard> -->
+		</control>
+	</customView>
+</theme>

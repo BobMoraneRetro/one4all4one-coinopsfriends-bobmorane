@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<gamecarousel name="gamecarousel">
+			<zIndex>43</zIndex>
+			<pos>0.475 0</pos>
+			<size>0.8 1</size>
+			<logoScale>1.2</logoScale>
+			<logoScale ifSubset="wheelform:standard,gwheelbackgr:logounified">1.5</logoScale>
+			<logoSize>0.150 0.260</logoSize>
+			<color>00000000</color>
+			<maxLogoCount>15</maxLogoCount>
+			<logoAlignment>center</logoAlignment>
+			<imageSource>marquee</imageSource>
+			<!-- text, image, thumbnail, marquee -->
+			<defaultTransition>instant</defaultTransition>
+			<type ifSubset="wheelform:standard">vertical_wheel</type>
+			<logoRotation ifSubset="wheelform:standard,wheelspace:serre">-4.5</logoRotation>
+			<logoRotation ifSubset="wheelform:standard,wheelspace:serre2">-4.3</logoRotation>
+			<logoRotation ifSubset="wheelform:standard,wheelspace:tresserre">-3</logoRotation>
+			<logoRotation ifSubset="wheelform:standard,wheelspace:aere">-5.5</logoRotation>
+			<logoRotationOrigin ifSubset="wheelform:standard">6 0.5</logoRotationOrigin>
+			<type ifSubset="wheelform:courbeinverse">vertical_wheel</type>
+			<logoRotation ifSubset="wheelform:courbeinverse">5.5</logoRotation>
+			<logoRotationOrigin ifSubset="wheelform:courbeinverse">-6.0 0.5</logoRotationOrigin>
+			<pos ifSubset="wheelform:courbeinverse">0.475 0</pos>
+			<type ifSubset="wheelform:vertical">vertical_wheel</type>
+			<logoRotation ifSubset="wheelform:vertical">-0.35</logoRotation>
+			<logoRotationOrigin ifSubset="wheelform:vertical">100 0</logoRotationOrigin>
+			<pos ifSubset="wheelform:vertical">0.475 0</pos>
+		</gamecarousel>
+	</customView>
+</theme>

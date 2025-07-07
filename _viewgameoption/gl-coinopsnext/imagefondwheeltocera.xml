@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<image name="fanart_extra" extra="true">
+			<visible>false</visible>
+		</image>
+		<image name="fondwheel" extra="true">
+			<autoFade>false</autoFade>
+			<path ifSubset="custombuilds:standardbuilds,fondgamewheel:fanartsolo">firstfile(${standardsbuildsfanart},{game:thumbnail},{game:boxart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<path ifSubset="custombuilds:retrofreshbat,fondgamewheel:fanartsolo">firstfile(${freshbuildfanart},{game:thumbnail},{game:boxart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<path ifSubset="custombuilds:standardbuilds,fondgamewheel:covertsolo">firstfile(${extgamecoverjpg},${standardsbuildsfanart},{game:thumbnail},{game:boxart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<path ifSubset="custombuilds:retrofreshbat,fondgamewheel:covertsolo">firstfile(${extgamecoverjpg},${freshbuildfanart},{game:thumbnail},{game:boxart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<path ifSubset="fondgamewheel:boxartsolo">firstfile({game:boxart},{game:thumbnail},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<path ifSubset="fondgamewheel:thumbsolo">firstfile({game:thumbnail},{game:boxart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<pos>0.71 0.5</pos>
+			<size>0 1.07</size>
+			<origin>0.5 0.5</origin>
+			<color>FFFFFFFF</color>
+			<colorEnd>FFFFFFDD</colorEnd>
+			<gradientType>horizontal</gradientType>é
+			<linearSmooth>true</linearSmooth>
+			<zIndex>1</zIndex>
+			<scaleOrigin>-0.15 0</scaleOrigin>
+		</image>
+	</customView>
+</theme>

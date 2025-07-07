@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Effet inspiré par le Thème Artflix Cobalto de Galisteo -->
+<theme>
+	<formatVersion>7</formatVersion>
+	<view name="system">
+		<image name="staticBackground">
+			<origin>0 0</origin>
+			<pos>0 0.66</pos>
+			<size>3 0.3</size>
+			<opacity>0.3</opacity>
+			<linearSmooth>true</linearSmooth>
+			<path ifSubset="vagues:vaguebleue">${themePath}/_viewsystoption/sl-coinops/co_vagues/bleu1.png</path>
+			<path ifSubset="vagues:vaguerouge">${themePath}/_viewsystoption/sl-coinops/co_vagues/rouge1.png</path>
+			<path ifSubset="vagues:vagueviolet">${themePath}/_viewsystoption/sl-coinops/co_vagues/violet1.png</path>
+			<zIndex>835</zIndex>
+			<storyboard repeatAt="1">
+				<animation property="offsetX" from="0" to="-2" begin="" duration="32005" mode="Linear" autoReverse="true" repeat="2"/>
+				<animation property="opacity" from="0.3" to="0.5" begin="4000" duration="1005" mode="Linear"/>
+			</storyboard>
+		</image>
+		<image name="staticBackground2">
+			<origin>0 0</origin>
+			<pos>0 0.66</pos>
+			<size>3 0.3</size>
+			<opacity>0.3</opacity>
+			<linearSmooth>true</linearSmooth>
+			<path ifSubset="vagues:vaguebleue">${themePath}/_viewsystoption/sl-coinops/co_vagues/bleu2.png</path>
+			<path ifSubset="vagues:vaguerouge">${themePath}/_viewsystoption/sl-coinops/co_vagues/rouge2.png</path>
+			<path ifSubset="vagues:vagueviolet">${themePath}/_viewsystoption/sl-coinops/co_vagues/violet2.png</path>
+			<zIndex>838</zIndex>
+			<storyboard repeatAt="1">
+				<animation property="offsetX" from="0" to="-2" begin="" duration="25005" mode="Linear" autoReverse="true" repeat="2"/>
+				<animation property="opacity" from="0.3" to="0.6" begin="1000" duration="2005" mode="Linear" autoReverse="true"/>
+			</storyboard>
+		</image>
+		<image name="staticBackground3">
+			<origin>0 0</origin>
+			<pos>0 0.66</pos>
+			<size>3 0.3</size>
+			<opacity>0.3</opacity>
+			<linearSmooth>true</linearSmooth>
+			<path ifSubset="vagues:vaguebleue">${themePath}/_viewsystoption/sl-coinops/co_vagues/bleu3.png</path>
+			<path ifSubset="vagues:vaguerouge">${themePath}/_viewsystoption/sl-coinops/co_vagues/rouge3.png</path>
+			<path ifSubset="vagues:vagueviolet">${themePath}/_viewsystoption/sl-coinops/co_vagues/violet3.png</path>
+			<zIndex>839</zIndex>
+			<storyboard repeatAt="1">
+				<animation property="offsetX" from="0" to="-2" begin="" duration="24005" mode="Linear" autoReverse="true" repeat="2"/>
+				<animation property="opacity" from="0.3" to="0.4" begin="8000" duration="3005" mode="Linear" autoReverse="true"/>
+			</storyboard>
+		</image>
+		<image name="staticBackground4">
+			<origin>0 0</origin>
+			<pos>0 0.66</pos>
+			<size>3 0.35</size>
+			<opacity>0.8</opacity>
+			<linearSmooth>true</linearSmooth>
+			<path>${themePath}/_viewsystoption/sl-coinops/co_vagues/black1.png</path>
+			<zIndex>832</zIndex>
+			<storyboard repeatAt="1">
+				<animation property="offsetX" from="0" to="-2" begin="" duration="25005" mode="Linear" autoReverse="true" repeat="2"/>
+			</storyboard>
+		</image>
+		<image name="staticBackground5">
+			<origin>0 0</origin>
+			<pos>0 0.66</pos>
+			<size>3 0.35</size>
+			<opacity>0.5</opacity>
+			<linearSmooth>true</linearSmooth>
+			<path>${themePath}/_viewsystoption/sl-coinops/co_vagues/black2.png</path>
+			<zIndex>833</zIndex>
+			<storyboard repeatAt="1">
+				<animation property="offsetX" from="0" to="-2" begin="" duration="24005" mode="Linear" autoReverse="true" repeat="2"/>
+				<animation property="opacity" from="0.5" to="0.7" begin="8000" duration="3005" mode="Linear" autoReverse="true"/>
+			</storyboard>
+		</image>
+	</view>
+</theme>

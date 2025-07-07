@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoice.coinops}" inherits="gamecarousel">
+		<!-- Enchainement screenshot/video -->
+		<video name="md_video">
+			<visible>false</visible>
+		</video>
+		<video name="prevvid" extra="true">
+			<path>firstfile(${extgamevideomp4},${extgamevideoavi},{game:video})</path>
+			<pos>0.2485 0.538</pos>
+			<maxSize>0.4 0.488</maxSize>
+			<origin>0.5 0.5</origin>
+			<effect>none</effect>
+			<zIndex>9</zIndex>
+		</video>
+		<!-- <video name="videocustomavi" extra="true"> -->
+			<!-- <visible>!exists(${extgamevideomp4})</visible> -->
+			<!-- <path>${extgamevideoavi}</path> -->
+			<!-- <pos>0.2485 0.538</pos> -->
+			<!-- <maxSize>0.4 0.488</maxSize> -->
+			<!-- <origin>0.5 0.5</origin> -->
+			<!-- <effect>none</effect> -->
+			<!-- <zIndex>9</zIndex> -->
+		<!-- </video> -->
+		<!-- <video name="videocustommp4" extra="true"> -->
+			<!-- <visible>!exists(${extgamevideoavi})</visible> -->
+			<!-- <path>${extgamevideomp4}</path> -->
+			<!-- <pos>0.2485 0.538</pos> -->
+			<!-- <maxSize>0.4 0.488</maxSize> -->
+			<!-- <origin>0.5 0.5</origin> -->
+			<!-- <effect>none</effect> -->
+			<!-- <zIndex>9</zIndex> -->
+		<!-- </video> -->
+		<!-- <video name="previewvid" extra="true"> -->
+			<!-- <path>{game:video}</path> -->
+			<!-- <origin>0.5 0.5</origin> -->
+			<!-- <pos>0.2485 0.538</pos> -->
+			<!-- <maxSize>0.4 0.488</maxSize> -->
+			<!-- <zIndex>9</zIndex> -->
+			<!-- <effect>none</effect> -->
+			<!-- <visible> -->
+						<!-- !exists(${extgamevideoavi}) -->
+			<!-- &amp;&amp;	!exists(${extgamevideomp4}) -->
+			
+			<!-- </visible> -->
+				<!-- </video> -->
+	</customView>
+</theme>

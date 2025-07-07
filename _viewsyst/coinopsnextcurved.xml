@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Theme of the view: CoinOPS converted for ES (Unofficial and unsupported by original team)
+author: CoinOPS Team
+Converted By Bob Morane
+license: creative commons CC-BY-NC-SA
+! Not for sale or donation request !
+-->
+<theme>
+	<formatVersion>7</formatVersion>
+	<view name="system">
+		<carousel name="systemcarousel">
+			<type>horizontal_wheel</type>
+			<size>1 1</size>
+			<pos>0.5 0.8</pos>
+			<origin>0.5 0.5</origin>
+			<gradientType>horizontal</gradientType>
+			<logoScale>1.2</logoScale>
+			<logoRotation>9.5</logoRotation>
+			<logoRotationOrigin>0.5 18</logoRotationOrigin>
+			<!-- 6 9 ou 5 7 valeur pour espacer les logos -->
+			<logoAlignment>center</logoAlignment>
+			<color>00000000</color>
+			<colorEnd>00000000</colorEnd>
+			<systemInfoDelay>700</systemInfoDelay>
+			<systemInfoCountOnly>false</systemInfoCountOnly>
+			<zIndex>301</zIndex>
+			<logoSize>0.18 0.18</logoSize>
+			<transitionSpeed>650</transitionSpeed>
+			<minLogoOpacity>0.6</minLogoOpacity>
+			<maxLogoCount>5</maxLogoCount>
+			<!-- <linearSmooth>true</linearSmooth> -->
+			<defaultTransition>instant</defaultTransition>
+		</carousel>
+		<image name="background" extra="static">
+			<path>./coinopsnext/coinopsnext.jpg</path>
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<zIndex>0</zIndex>
+		</image>
+		<image name="vignette" extra="true">
+			<pos>0.5 0.5</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>1 1</maxSize>
+			<path>./coinopsnext/overlay.png</path>
+			<gradientType>horizontal</gradientType>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>500</zIndex>
+			<opacity>1</opacity>
+		</image>
+		<image name="background98" extra="static">
+			<path>./coinopsnext/bas.png</path>
+			<origin>0 0</origin>
+			<opacity>0.95</opacity>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<zIndex>15</zIndex>
+		</image>
+	</view>
+</theme>
