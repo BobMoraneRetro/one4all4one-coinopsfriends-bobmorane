@@ -16,11 +16,10 @@ Description :
 
 ---  
 
-# Cabs per game
+# Views
 You can find more cabs and more artwork on my discord here : https://discord.com/invite/msnaz7Kev7
 
 4 System Views are availlable with multiple customisation option for each :
-
 
 | Retrofe Next Curve  | Retrofe Next
 | ------------- | ------------- |
@@ -30,12 +29,19 @@ You can find more cabs and more artwork on my discord here : https://discord.com
 | ------------- | ------------- |
 | ![next2](https://github.com/user-attachments/assets/a47615b8-4462-4599-b49e-94137b57ab5d)  | ![typeR](https://github.com/user-attachments/assets/6d8abf11-6619-4524-89f1-c36363d15e74)  | 
 
-# Tool to create Gameview, System-view or System-defaut view
 
-You can make your own theme for games or system with the app' we develop, like old hypertheme : just put some artwork, place the video, place boxart or what you want and choose animation to apply on each image and video and generate it automatically. Preview it in real time on your 2nd screen directly in retrobat or batocera by navigate on the game (no reboot needed)
-Yo can even import *.psd with artwork aldready in place. Explanation, tutorial and up to date app' version availlable on discord
+4 unique Gameviews are availlable with multiple customisation option for each :
 
-![Image](https://github.com/user-attachments/assets/29c2b596-d2cf-4d8e-b5ae-ee1d484aa2e2)
+| Coinops (Cabs per game)  | Show Big & Small
+| ------------- | ------------- |
+| ![coinops](https://github.com/user-attachments/assets/05c6dc76-c83c-4e1f-947b-07760a782642)  | ![next](https://github.com/user-attachments/assets/9e57ae9a-df3e-4762-a8d3-a22bae0d49e2)  | 
+
+| Speedbull  | Traviolta
+| ------------- | ------------- |
+| ![next2](https://github.com/user-attachments/assets/a47615b8-4462-4599-b49e-94137b57ab5d)  | ![typeR](https://github.com/user-attachments/assets/6d8abf11-6619-4524-89f1-c36363d15e74)  | 
+
+
+
 
 ### License :
 Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)  
