@@ -19,13 +19,14 @@ Description :
 # Cabs per game
 You can find more cabs and more artwork on my discord here : https://discord.com/invite/msnaz7Kev7
 
-Info - Priority for displaying theme in gameview is : Specific theme for a game -> if not exist -> Defaut theme for gameview -> if not exist -> Defaut generic for gameview
+4 System Views are availlable :
 
-| Theme for systemview  | Specific theme for a game | Defaut theme for gameview  |
-| ------------- | ------------- | ------------- |
-| ![systemtheme](https://github.com/user-attachments/assets/6c85069d-63a2-4ea8-8c29-d576821ec286)  | ![gametheme](https://github.com/user-attachments/assets/a6ca0762-cd94-44e7-87e5-2cec5879c0e9)  | ![defautgametheme](https://github.com/user-attachments/assets/b7cbaefb-dfc9-4073-9007-6608cf581ccb)  | 
 
-| Defaut generic theme for gameview  | Defaut generic theme for systemview
+| Retrofe Next Curve  | Retrofe Next
+| ------------- | ------------- |
+| ![genericdefaut](https://github.com/user-attachments/assets/ee95b902-d2af-4d89-9061-52a467ea8d7b)  | ![genericsystem](https://github.com/user-attachments/assets/f6023f97-7684-43e4-bf42-7feef0e6cffd)  | 
+
+| retrofe Next 2  | Retrofe Type R
 | ------------- | ------------- |
 | ![genericdefaut](https://github.com/user-attachments/assets/ee95b902-d2af-4d89-9061-52a467ea8d7b)  | ![genericsystem](https://github.com/user-attachments/assets/f6023f97-7684-43e4-bf42-7feef0e6cffd)  | 
 
