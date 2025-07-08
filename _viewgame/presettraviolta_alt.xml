@@ -6,29 +6,21 @@
 			<visible>false</visible>
 		</control>
 		<gamecarousel name="gamecarousel">
-			<!-- <linearSmooth>true</linearSmooth> -->
 			<zIndex>90</zIndex>
 			<type>horizontal</type>
 			<pos>-0.405 0.1865</pos>
 			<pos ifHelpPrompts="true">-0.405 0.1865</pos>
 			<size>1.73 1</size>
 			<logoScale>1.5</logoScale>
-			<!-- <logoScale if="{system.theme} == 'snes' || {system.theme} == 'n64">2</logoScale> -->
 			<logoSize>0.350 0.350</logoSize>
 			<color>00000000</color>
 			<maxLogoCount>6</maxLogoCount>
-			<!-- <maxLogoCount ifSubset="starthumb:starbox2d">11</maxLogoCount> -->
 			<logoAlignment>bottom</logoAlignment>
 			<minLogoOpacity>1</minLogoOpacity>
 			<transitionSpeed>1050</transitionSpeed>
 			<logoPos>0.5 0.5</logoPos>
 			<imageSource>thumbnail</imageSource>
 			<defaultTransition>instant</defaultTransition>
-			<!-- <scaledLogoSpacing ifSubset="starthumb:starbox3d">3</scaledLogoSpacing> -->
-			<!-- <scaledLogoSpacing ifSubset="starthumb:starbox2d">0.5</scaledLogoSpacing> -->
-			<!-- <scaledLogoSpacing if="{system.theme} == 'snes' || {system.theme} == 'n64">1</scaledLogoSpacing> -->
-			<!-- <logoRotation>0 0</logoRotation> -->
-			<!-- <logoRotationOrigin>0.5 5</logoRotationOrigin> -->
 			<itemTemplate>
 				<container>
 					<image name="fanart">
@@ -36,10 +28,9 @@
 						<autoFade>false</autoFade>
 						<pos>0.5 0.5</pos>
 						<minSize>0.55 0.55</minSize>
-						<!-- <maxSize>0.55 1</maxSize> -->
 						<origin>0.5 0.5</origin>
 						<path>{game:fanart}</path>
-						<path if="{system.theme} == 'switch'">${extgameartpng}</path>
+						<!-- <path if="{system.theme} == 'switch'">${extgameartpng}</path> -->
 						<linearSmooth>true</linearSmooth>
 						<zIndex>91</zIndex>
 						<color>858585ff</color>
@@ -62,7 +53,7 @@
 					<image name="nofanart">
 						<visible ifSubset="custombuilds:standardbuilds">!exists({game:fanart})</visible>
 						<visible ifSubset="custombuilds:retrofreshbat">!exists({game:image})</visible>
-						<visible if="{system.theme} == 'switch'">!exists(${extgameartpng})</visible>
+						<!-- <visible if="{system.theme} == 'switch'">!exists(${extgameartpng})</visible> -->
 						<autoFade>false</autoFade>
 						<path>${intfanartfresh}</path>
 						<saturation>0</saturation>
@@ -110,7 +101,7 @@
 						</storyboard>
 					</image>
 					<image name="logojeux">
-						<visible if="{system.theme} == 'switch'">false</visible>
+						<!-- <visible if="{system.theme} == 'switch'">false</visible> -->
 						<pos>0.5 0.5</pos>
 						<maxSize>0.3 0.3</maxSize>
 						<origin>0.5 0.5</origin>
@@ -121,9 +112,7 @@
 							<animation property="scale" to="1.2" begin="" duration="350" mode="Linear"/>
 						</storyboard>
 						<storyboard event="activate">
-							<!-- <animation property="opacity" to="0" begin="" duration="600" mode="Linear"/> -->
 							<animation property="scale" to="1.4" begin="" duration="350" mode="Linear"/>
-							<!-- <animation property="opacity" from="0" to="1" begin="600" duration="500" mode="Linear"/> -->
 						</storyboard>
 						<storyboard event="deactivate">
 							<animation property="scale" to="1" begin="" duration="350" mode="Linear"/>
@@ -135,7 +124,7 @@
 						</storyboard>
 					</image>
 					<text name="ifnologojeux">
-						<visible if="{system.theme} == 'switch'">!exists(${extgameartpng})</visible>
+						<!-- <visible if="{system.theme} == 'switch'">!exists(${extgameartpng})</visible> -->
 						<visible>!exists({game:marquee})</visible>
 						<text>{game:name}</text>
 						<fontPath>${themePath}/_viewgame/traviolta/impact.ttf</fontPath>
@@ -154,7 +143,6 @@
 						<storyboard event="activate">
 							<animation property="opacity" to="0" begin="" duration="600" mode="Linear"/>
 							<animation property="scale" to="1.2" begin="" duration="350" mode="Linear"/>
-							<!-- <animation property="opacity" from="0" to="1" begin="600" duration="500" mode="Linear"/> -->
 						</storyboard>
 						<storyboard event="deactivate">
 							<animation property="scale" to="1" begin="" duration="350" mode="Linear"/>
@@ -179,7 +167,6 @@
 			<linearSmooth>true</linearSmooth>
 			<zIndex>80</zIndex>
 		</image>
-		
 		<image name="logosytemgamelistshadow" extra="true">
 			<autoFade>false</autoFade>
 			<origin>0.5 0.5</origin>
@@ -188,7 +175,7 @@
 			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
 			<maxSize>0.1 0.1</maxSize>
 			<linearSmooth>true</linearSmooth>
-			<zIndex>80</zIndex>
+			<zIndex>91</zIndex>
 			<color>000000</color>
 		</image>
 		<image name="logosytemgamelist" extra="true">
@@ -199,19 +186,14 @@
 			"${bobmediapath}/_systemmedia/_logosyst/clearlogos/"  + ({game:system:theme}) + ".png")</path>
 			<maxSize>0.1 0.1</maxSize>
 			<linearSmooth>true</linearSmooth>
-			<zIndex>80</zIndex>
-		</image>	
-		
+			<zIndex>91</zIndex>
+		</image>
 		<!-- Habillage Fanart -->
 		<image name="fanartpresetback" if="{system.theme} == 'windows' 
 			|| {system.theme} == 'switch'" extra="true">
-			<shared>false</shared>
-			<visible ifSubset="custombuilds:standardbuilds">exists({game:fanart})</visible>
-			<visible ifSubset="custombuilds:retrofreshbat">exists({game:image})</visible>
 			<autoFade>false</autoFade>
-			<path ifSubset="custombuilds:standardbuilds">${standardsbuildsfanart}</path>
-			<path ifSubset="custombuilds:retrofreshbat">${freshbuildfanart}</path>
-			<!-- <default>./../../_Common/Imagedefault/{game:system}.png</default> -->
+			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
 			<gradientType>horizontal</gradientType>
 			<linearSmooth>true</linearSmooth>
 			<zIndex>4</zIndex>
@@ -234,58 +216,38 @@
 			<zIndex>2</zIndex>
 			<blurColor>000000</blurColor>
 		</screenshader>
-		<image name="backifnofanart" extra="true">
-			<visible ifSubset="custombuilds:standardbuilds">!exists({game:fanart})</visible>
-			<visible ifSubset="custombuilds:retrofreshbat">!exists({game:image})</visible>
-			<autoFade>false</autoFade>
-			<path>${intfanartfresh}</path>
-			<opacity>0.5</opacity>
-			<saturation>0</saturation>
-			<gradientType>horizontal</gradientType>
-			<linearSmooth>true</linearSmooth>
-			<pos>0.5 0.5</pos>
-			<origin>0.5 0.5</origin>
-			<maxSize>2 1</maxSize>
-			<color>FFFFFFFF</color>
-			<colorEnd>cccccc</colorEnd>
-			<gradientType>vertical</gradientType>
-			<zIndex>2</zIndex>
-		</image>
-		<image name="backifnofanart2" extra="true">
-			<visible ifSubset="custombuilds:standardbuilds">!exists({game:fanart})</visible>
-			<visible ifSubset="custombuilds:retrofreshbat">!exists({game:image})</visible>
-			<autoFade>false</autoFade>
-			<path ifSubset="custombuilds:standardbuilds">{game:image}</path>
-			<path ifSubset="custombuilds:retrofreshbat">{game:thumbnail}</path>
-			<opacity>1</opacity>
-			<saturation>1</saturation>
-			<gradientType>horizontal</gradientType>
-			<linearSmooth>true</linearSmooth>
-			<pos>0.995 0.25</pos>
-			<origin>1 0.5</origin>
-			<maxSize>0.3 0.3</maxSize>
-			<color>FFFFFFFF</color>
-			<colorEnd>cccccc</colorEnd>
-			<gradientType>vertical</gradientType>
-			<zIndex>2</zIndex>
-			<shader>
-				<path>:/shaders/border.glsl</path>
-				<cornerRadius>0.03</cornerRadius>
-				<borderSize>0.022</borderSize>
-				<borderColor>ffffff30</borderColor>
-				<innerShadowSize>0.01</innerShadowSize>
-				<innerShadowColor>00000030</innerShadowColor>
-				<outerShadowSize>0.020</outerShadowSize>
-				<outerShadowColor>00000050</outerShadowColor>
-			</shader>
-		</image>
+		<!-- <image name="backifnofanart2" extra="true"> -->
+			<!-- <visible ifSubset="custombuilds:standardbuilds">!exists({game:fanart})</visible> -->
+			<!-- <visible ifSubset="custombuilds:retrofreshbat">!exists({game:image})</visible> -->
+			<!-- <autoFade>false</autoFade> -->
+			<!-- <path ifSubset="custombuilds:standardbuilds">{game:image}</path> -->
+			<!-- <path ifSubset="custombuilds:retrofreshbat">{game:thumbnail}</path> -->
+			<!-- <opacity>1</opacity> -->
+			<!-- <saturation>1</saturation> -->
+			<!-- <gradientType>horizontal</gradientType> -->
+			<!-- <linearSmooth>true</linearSmooth> -->
+			<!-- <pos>0.995 0.25</pos> -->
+			<!-- <origin>1 0.5</origin> -->
+			<!-- <maxSize>0.3 0.3</maxSize> -->
+			<!-- <color>FFFFFFFF</color> -->
+			<!-- <colorEnd>cccccc</colorEnd> -->
+			<!-- <gradientType>vertical</gradientType> -->
+			<!-- <zIndex>2</zIndex> -->
+			<!-- <shader> -->
+				<!-- <path>:/shaders/border.glsl</path> -->
+				<!-- <cornerRadius>0.03</cornerRadius> -->
+				<!-- <borderSize>0.022</borderSize> -->
+				<!-- <borderColor>ffffff30</borderColor> -->
+				<!-- <innerShadowSize>0.01</innerShadowSize> -->
+				<!-- <innerShadowColor>00000030</innerShadowColor> -->
+				<!-- <outerShadowSize>0.020</outerShadowSize> -->
+				<!-- <outerShadowColor>00000050</outerShadowColor> -->
+			<!-- </shader> -->
+		<!-- </image> -->
 		<image name="fanartpreset" extra="true">
 			<shared>false</shared>
-			<visible ifSubset="custombuilds:standardbuilds">${standardsbuildsfanarttestyes}</visible>
-			<visible ifSubset="custombuilds:retrofreshbat">${freshbuildfanarttestyes}</visible>
-			<!-- <path>exists({game:fanart}) ? {game:fanart} : {game:image}</path> -->
-			<path ifSubset="custombuilds:standardbuilds">{game:fanart}</path>
-			<path ifSubset="custombuilds:retrofreshbat">{game:image}</path>
+			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
 			<autoFade>false</autoFade>
 			<gradientType>horizontal</gradientType>
 			<linearSmooth>true</linearSmooth>
@@ -312,10 +274,6 @@
 				<outerShadowColor>000000</outerShadowColor>
 			</shader>
 		</image>
-		
-		
-		
-		
 		<video name="previewvidpreset" extra="true">
 			<path>{game:video}</path>
 			<delay>0.6</delay>
@@ -390,7 +348,7 @@
 			<size>1 1</size>
 			<pos>0 0</pos>
 			<origin>0 0</origin>
-			<zIndex>79</zIndex>
+			<zIndex>90</zIndex>
 		</image>
 		<!-- Début de Gestion des rotations des cartouches et CD avec le scrap standard et la séparation manuelle dans les dossiers CD / Cart -->
 		<image name="cartridge" extra="true">
@@ -510,11 +468,12 @@
 			<zIndex>89</zIndex>
 		</image>
 		<image name="marqueetitre" extra="true">
+			<autoFade>false</autoFade>
 			<pos>0.15 0.12</pos>
 			<maxSize>0.25 0.2</maxSize>
 			<origin>0.5 0.5</origin>
 			<path>{game:marquee}</path>
-			<path if="{system.theme} == 'switch'">${extgameartpng}</path>
+			<!-- <path if="{system.theme} == 'switch'">${extgameartpng}</path> -->
 			<linearSmooth>true</linearSmooth>
 			<zIndex>91</zIndex>
 		</image>
@@ -543,17 +502,6 @@
 			<opacity>0.7</opacity>
 		</text>
 		<text name="md_description">
-			<!-- <visible>true</visible> -->
-			<!-- <pos>0.01 0.30</pos> -->
-			<!-- <size>0.284 0.11</size> -->
-			<!-- <fontSize>0.020</fontSize> -->
-			<!-- <color>ffffff</color> -->
-			<!-- <glowColor>00000066</glowColor> -->
-			<!-- <glowSize>2</glowSize> -->
-			<!-- <alignment>left</alignment> -->
-			<!-- <lineSpacing>1.5</lineSpacing> -->
-			<!-- <fontPath>${themePath}/_viewgame/traviolta/Titan.ttf</fontPath> -->
-			<!-- <zIndex>400</zIndex> -->
 			<fontPath>${themePath}/_viewgame/traviolta/OpenSans_Condensed-Bold.ttf</fontPath>
 			<color>ffffffff</color>
 			<pos>0.01 0.305</pos>

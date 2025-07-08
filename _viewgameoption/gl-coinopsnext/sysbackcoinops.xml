@@ -829,6 +829,45 @@
 			<zIndex>11</zIndex>
 			<scaleOrigin>-0.1 0</scaleOrigin>
 		</image>
+		<image name="fondposter10" ifSubset="systback:cpsnext2" extra="true">
+			<!-- <path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg",{game:image})</path> -->
+			<!-- <path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path> -->
+			<path>{game:fanart}</path>
+			<!-- <color>b7b7b7</color> -->
+			<!-- <colorEnd>FFFFFFDD</colorEnd> -->
+			<autoFade>false</autoFade>
+			<size>0.43 0.45</size>
+			<pos>0.5 0.5</pos>
+			<origin>0.5 0.5</origin>
+			<saturation>0.5</saturation>
+			<zIndex>999</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<visible>true</visible>
+			<!-- <visible>!exists("${themePath}/_viewgame/coinops/coinopsnext/" + stem({game:system:theme}) + ".png") &amp;&amp; -->
+			<!-- !exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible> -->
+		</image>
+		<image name="fondposter20" ifSubset="systback:cpsnext2" extra="true">
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.15 0.10</maxSize>
+			<pos>0.25 0.06</pos>
+			<maxSize>0.2 0.2</maxSize>
+			<pos>0.25 0.11</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>99</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<path>firstfile({game:marquee},{game:wheel})</path>
+			<!-- <visible>!exists("${themePath}/_viewgame/coinops/coinopsnext/" + stem({game:system:theme}) + ".png") &amp;&amp; -->
+			<!-- !exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible> -->
+			<!-- <visible if="{system.theme} == 'fbneo' ||  -->
+			<!-- {system.theme} == 'cps1' ||  -->
+			<!-- {system.theme} == 'cps2' ||  -->
+			<!-- {system.theme} == 'cps3' ||  -->
+			<!-- {system.theme} == 'cave' ||  -->
+			<!-- {system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp; -->
+			<!-- !exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp; -->
+			<!-- !exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible> -->
+		</image>
 		<!-- ############################################ choix 5 Fonds type CoinOPS Next 1 ############################################ -->
 		<!-- <image name="fondsystem" ifSubset="systback:cpsnext" extra="true"> -->
 			<!-- <origin>0.5 0.5</origin> -->
