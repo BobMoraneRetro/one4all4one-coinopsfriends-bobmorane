@@ -34,11 +34,11 @@ You can find more cabs and more artwork on my discord here : https://discord.com
 
 | Coinops (Cabs per game)  | Show Big & Small
 | ------------- | ------------- |
-| ![coinops](https://github.com/user-attachments/assets/05c6dc76-c83c-4e1f-947b-07760a782642)  | ![next](https://github.com/user-attachments/assets/9e57ae9a-df3e-4762-a8d3-a22bae0d49e2)  | 
+| ![coinops](https://github.com/user-attachments/assets/05c6dc76-c83c-4e1f-947b-07760a782642)  | ![show](https://github.com/user-attachments/assets/47fe28d0-7585-4a9a-9885-1001525bf4ff)  | 
 
 | Speedbull  | Traviolta
 | ------------- | ------------- |
-| ![next2](https://github.com/user-attachments/assets/a47615b8-4462-4599-b49e-94137b57ab5d)  | ![typeR](https://github.com/user-attachments/assets/6d8abf11-6619-4524-89f1-c36363d15e74)  | 
+| ![speedbull](https://github.com/user-attachments/assets/b0481a96-ddc0-4b3e-9b25-e29e54a624df)  | ![typeR](https://github.com/user-attachments/assets/6d8abf11-6619-4524-89f1-c36363d15e74)  | 
 
 
 
