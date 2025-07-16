@@ -5,9 +5,12 @@
 		<!-- ######## META DATA ####### -->
 		<languesdispo>Langues disponibles :</languesdispo>
 		<nodates>Pas de date</nodates>
+		<playcountone>partie</playcountone>
 		<playcount>parties</playcount>
 		<noplaycount>Jamais lancé</noplaycount>
 		<players>joueur(s)</players>
+		<playerss>joueurs</playerss>
+		<player>joueur</player>
 		<nogametime>Jamais joué</nogametime>
 		<noplayerdata>Inconnu</noplayerdata>
 		<noeditor>Editeur inconnu</noeditor>
@@ -193,6 +196,7 @@
 		<fondsysunifiedautomarquee>Coinops Collection unifié - TV + affiche jeux automatique</fondsysunifiedautomarquee>
 		<fondsysnext2>Coinops Next (à compléter)</fondsysnext2>
 		<fondsysnext>Coinops Next (incomplet)</fondsysnext>
+		<cabsonly>Borne d'arcade partout (Vons build)</cabsonly>
 		<fondsyscustom>Personnalisé (Par X-LeBiDuL-X)</fondsyscustom>
 		<cabsdefault>Fond système - Borne d'arcade et/ou fond par défaut (Gauche)</cabsdefault>
 		<viewlixnoir>Viewlix Noir</viewlixnoir>
@@ -247,7 +251,8 @@
 		<courbeinverse>A droite / Courbe inversée</courbeinverse>
 		<vertical>A droite / Vertical</vertical>
 		<wheelspace>Wheel - Ecartement des logos</wheelspace>
-		<serre>Se touche</serre>
+		<serre>Espacé</serre>
+		<serre2>Se touche</serre2>
 		<aere>Aéré</aere>
 		<tresserre>Se chevauche</tresserre>
 		<wheelspeed>Wheel - Vitesse de transition entre les logos</wheelspeed>

@@ -10,7 +10,7 @@
 		<image name="rankingcadre" extra="true">
 			<!-- <visible if="{system.theme} != 'mame'">false</visible> -->
 			<visible>{game:system:theme} == 'mame'</visible>
-			<path>${themePath}/_viewgame/coinops/rankvierge.png</path>
+			<path>${themePath}/_viewgameoption/gl-common/hi-score/rankvierge.png</path>
 			<pos>0.95 0.955</pos>
 			<color>FFFFFF</color>
 			<origin>0.5 1</origin>

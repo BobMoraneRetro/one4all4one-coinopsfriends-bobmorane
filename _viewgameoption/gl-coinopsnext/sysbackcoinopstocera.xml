@@ -16,6 +16,9 @@
 		<!-- Si aucun cabinets n'existe, prend le fond système dans coinops collec -->
 		<image name="fondsystem" ifSubset="systback:cpscollection" extra="true">
 			<linearSmooth>true</linearSmooth>
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<origin>0.5 0.5</origin>
 			<pos>0.46 0.5</pos>
 			<size>1 1</size>
@@ -45,6 +48,9 @@
 		<!-- Affiche une Tv et une affiche automatique si le fondsystem n'existe pas et qu'un fichier *.miss existe dans \_viewgame\coinops\coinopscollmiss -->
 		<image name="trinitron" ifSubset="systback:cpscollection" extra="true">
 			<visible>exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<linearSmooth>true</linearSmooth>
 			<origin>0.5 0.5</origin>
 			<pos>0.46 0.5</pos>
@@ -72,6 +78,9 @@
 		</image>
 		<image name="fondtrini2" ifSubset="systback:cpscollection" extra="true">
 			<visible>exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<autoFade>false</autoFade>
 			<tile>false</tile>
 			<maxSize>0.15 0.10</maxSize>
@@ -86,6 +95,9 @@
 		<!-- Affiche le choix de l'utilisateur si le fondsystem ou borne spécifique n'existent pas et qu'un fichier *.miss n'existe pas dans \_viewgame\coinops\coinopscollmiss -->
 		<image name="fonddefaut" ifSubset="systback:cpscollection" extra="true">
 			<linearSmooth>true</linearSmooth>
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<origin>0.5 0.5</origin>
 			<pos>0.46 0.5</pos>
 			<size>1 1</size>
@@ -111,17 +123,15 @@
 			<!-- <path if="${system.manufacturer} == 'Collections'">("${themePath}/_viewgame/coinops/defautcabs/" + stem({game:system:theme}) + ".png")</path> -->
 			<zIndex>11</zIndex>
 			<scaleOrigin>-0.1 0</scaleOrigin>
-			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
-			!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
-			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
-			<visible if="{system.theme} == 'fbneo' || 
-			{system.theme} == 'cps1' || 
-			{system.theme} == 'cps2' || 
-			{system.theme} == 'cps3' || 
-			{system.theme} == 'cave' || 
-			{system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
-			!exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
-			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png")</visible>
+			<!-- <visible if="{system.theme} == 'fbneo' ||  -->
+			<!-- {system.theme} == 'cps1' ||  -->
+			<!-- {system.theme} == 'cps2' ||  -->
+			<!-- {system.theme} == 'cps3' ||  -->
+			<!-- {system.theme} == 'cave' ||  -->
+			<!-- {system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp; -->
+			<!-- !exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp; -->
+			<!-- !exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible> -->
 		</image>
 		<!-- Marquee de la borne en fonction de la borne par défaut choisies -->
 		<image name="fondposter1" ifSubset="systback:cpscollection" extra="true">
@@ -211,39 +221,32 @@
 		<!-- Fin des marquees automatiques -->
 		<!-- Cabs avec wall originals -->
 		<image name="cabinets" ifSubset="systback:cpscollection" extra="true">
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png")</visible>
+			<autoFade>false</autoFade>
 			<linearSmooth>true</linearSmooth>
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<origin>0.5 0.5</origin>
 			<pos>0.46 0.5</pos>
 			<size>1 1</size>
-			<autoFade>false</autoFade>
-			<autoFade ifSubset="systbacktransition:standard">false</autoFade>
 			<path>${globalgamecabs}</path>
 			<path if="{system.theme} == 'fbneo' || 
 			{system.theme} == 'cps1' || 
 			{system.theme} == 'cps2' || 
 			{system.theme} == 'cps3' || 
 			{system.theme} == 'cave' || 
-			{system.theme} == 'hbmame' ">"${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png"</path>
+			{system.theme} == 'hbmame'">"${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png"</path>
 			<zIndex>11</zIndex>
 			<scaleOrigin>-0.1 0</scaleOrigin>
-			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png")</visible>
 		</image>
-		<!-- Cabs sans wall : pas d'origine -->
-		<!-- <image name="cabinetssolo" ifSubset="systback:cpscollection" extra="true"> -->
-		<!-- <linearSmooth>true</linearSmooth> -->
-		<!-- <origin>0.5 0.5</origin> -->
-		<!-- <pos>0.298 0.5</pos> -->
-		<!-- <maxSize>1 1</maxSize> -->
-		<!-- <autoFade ifSubset="systbacktransition:standard">false</autoFade> -->
-		<!-- <path>"${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabssolo/" + stem({game:rom}) + ".png"</path> -->
-		<!-- <zIndex>12</zIndex> -->
-		<!-- <scaleOrigin>-0.1 0</scaleOrigin> -->
-		<!-- <visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png")</visible> -->
-		<!-- </image> -->
 		<!-- ##################################################################################################################################################### -->
 		<!-- ############################################ choix 2 : trinitron avec nom system dynamique, sans affiche ############################################ -->
 		<!-- ##################################################################################################################################################### -->
 		<image name="fondsystem" ifSubset="systback:cpssimplenomarquee" extra="true">
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<origin>0.5 0.5</origin>
 			<pos>0.46 0.5</pos>
 			<size>1 1</size>
@@ -280,6 +283,9 @@
 		<!-- ############################################ choix 3 Trinitron avec affiche automatique ############################################ -->
 		<!-- #################################################################################################################################### -->
 		<image name="fondsystem" ifSubset="systback:cpssimplemarquee" extra="true">
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<origin>0.5 0.5</origin>
 			<pos>0.46 0.5</pos>
 			<size>1 1</size>
@@ -316,22 +322,25 @@
 		<!-- ############################################ choix 4 Fonds type CoinOPS Next ####################################################### -->
 		<!-- #################################################################################################################################### -->
 		<image name="fondsystem" ifSubset="systback:cpsnext2" extra="true">
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<origin>0.5 0.5</origin>
 			<pos>0.46 0.5</pos>
 			<size>1 1</size>
-			<!-- <path>firstfile("${bobmediapath}/_viewgame/coinops/coinopsnext2/${system.theme}.png", -->
-			<!-- "${bobmediapath}/_viewgame/coinops/coinopsnext/${system.theme}.png", -->
-			<path>${bobmediapath}/_viewgame/coinops/defautcabs/3dsimple.png</path>
-			<!-- cab non spécifique par défaut en attendant mieux -->
-			<path>${bobmediapath}/_viewgame/coinops/coinopsnext/${system.theme}.png</path>
-			<!-- cab non spécifique par défaut en attendant mieux -->
-			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopsnext2/${system.theme}.png</path> -->
-			<!-- template issu de coinOPS next 2 -->
+			<path>firstfile(${intcoinopsnext},"${bobmediapath}/_viewgame/coinops/defautcabs/3dsimple.png")</path>
 			<zIndex>11</zIndex>
 			<scaleOrigin>-0.1 0</scaleOrigin>
 		</image>
-		
-		<image name="fondposter1" ifSubset="systback:cpsnext2" extra="true">
+		<!-- <image name="neonsousposter" ifSubset="systback:cpsnext2" extra="true"> -->
+			<!-- <path>${themePath}/_viewgame/coinops/neon.png</path> -->
+			<!-- <origin>0.5 0.5</origin> -->
+			<!-- <pos>0.25 0.1</pos> -->
+			<!-- <size>0.52 0.25</size> -->
+			<!-- <zIndex>3</zIndex> -->
+			<!-- <visible>!exists("${themePath}/_viewgame/coinops/coinopsnext/"  + ({game:system:theme}) + ".png")</visible> -->
+		<!-- </image> -->
+		<image name="fondposter1borne3d" ifSubset="systback:cpsnext2" extra="true">
 			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg",{game:image})</path>
 			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
 			<color>b7b7b7</color>
@@ -339,17 +348,21 @@
 			<autoFade>false</autoFade>
 			<tile>false</tile>
 			<maxSize>0.43 1</maxSize>
-			<pos>0.25 0.2</pos>
 			<size>0.43 0.45</size>
 			<pos>0.25 0.15</pos>
 			<origin>0.5 0.5</origin>
 			<saturation>0.5</saturation>
 			<zIndex>3</zIndex>
 			<scaleOrigin>-0.1 0</scaleOrigin>
-			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
-			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopsnext/"  + ({game:system:theme}) + ".png")</visible>
+			<storyboard repeat="forever">
+				<animation property="opacity" from="1" to="0.8" begin="1500" duration="100" autoreverse="true" repeat="5" mode="linear"/>
+				<animation property="opacity" from="1" to="0.8" begin="1900" duration="50" autoreverse="true" repeat="3" mode="linear"/>
+				<animation property="opacity" from="1" to="0.8" begin="3200" duration="70" autoreverse="true" repeat="2" mode="linear"/>
+				<animation property="opacity" from="1" to="0.8" begin="3700" duration="50" autoreverse="true" repeat="4" mode="linear"/>
+			</storyboard>
 		</image>
-		<image name="fondposter2" ifSubset="systback:cpsnext2" extra="true">
+		<image name="fondposter2borne3d" ifSubset="systback:cpsnext2" extra="true">
 			<autoFade>false</autoFade>
 			<tile>false</tile>
 			<maxSize>0.15 0.10</maxSize>
@@ -360,36 +373,19 @@
 			<zIndex>3</zIndex>
 			<scaleOrigin>-0.1 0</scaleOrigin>
 			<path>firstfile({game:marquee},{game:wheel})</path>
-			<visible>!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp;
-			!exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible>
-			<!-- <visible if="{system.theme} == 'fbneo' ||  -->
-			<!-- {system.theme} == 'cps1' ||  -->
-			<!-- {system.theme} == 'cps2' ||  -->
-			<!-- {system.theme} == 'cps3' ||  -->
-			<!-- {system.theme} == 'cave' ||  -->
-			<!-- {system.theme} == 'hbmame' ">!exists("${themePath}/_viewgame/coinops/coinopscollec/" + stem({game:system:theme}) + ".png") &amp;&amp; -->
-			<!-- !exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp; -->
-			<!-- !exists("${themePath}/_viewgame/coinops/coinopscollmiss/" + stem({game:system:theme}) + ".miss")</visible> -->
+			<visible>!exists("${themePath}/_viewgame/coinops/coinopsnext/"  + ({game:system:theme}) + ".png")</visible>
+			<!-- <storyboard repeat="forever"> -->
+				<!-- <animation property="opacity" from="1" to="0.8" begin="1500" duration="100" autoreverse="true" repeat="5" mode="linear"/> -->
+				<!-- <animation property="opacity" from="1" to="0.8" begin="1900" duration="50" autoreverse="true" repeat="3" mode="linear"/> -->
+				<!-- <animation property="opacity" from="1" to="0.8" begin="3200" duration="70" autoreverse="true" repeat="2" mode="linear"/> -->
+				<!-- <animation property="opacity" from="1" to="0.8" begin="3700" duration="50" autoreverse="true" repeat="4" mode="linear"/> -->
+			<!-- </storyboard> -->
 		</image>
-		
-		
-		
-		<!-- ############################################ choix 5 Fonds type CoinOPS Next 1 ############################################ -->
-		<!-- <image name="fondsystem" ifSubset="systback:cpsnext" extra="true"> -->
-			<!-- <origin>0.5 0.5</origin> -->
-			<!-- <pos>0.46 0.5</pos> -->
-			<!-- <size>1 1</size> -->
-			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopssimple/3dsimple.png</path> -->
-			<!-- cab non spécifique par défaut en attendant mieux -->
-			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopsnext2/${system.theme}.png</path> -->
-			<!-- cab non spécifique par défaut en attendant mieux -->
-			<!-- <path>${bobmediapath}/_viewgame/coinops/coinopsnext/${system.theme}.png</path> -->
-			<!-- template issu de coinOPS next 2 -->
-			<!-- <zIndex>11</zIndex> -->
-			<!-- <scaleOrigin>-0.1 0</scaleOrigin> -->
-		<!-- </image> -->
 		<!-- ############################################ choix 5 Fonds personnalisés ############################################ -->
 		<image name="fondsystemperso" ifSubset="systback:cpsperso" extra="true">
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<origin>0.5 0.5</origin>
 			<pos>0.46 0.5</pos>
 			<size>1 1</size>
@@ -398,6 +394,9 @@
 			<scaleOrigin>-0.1 0</scaleOrigin>
 		</image>
 		<image name="fondsystem" ifSubset="systback:cpsperso" extra="true">
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
 			<visible>!exists("${themePath}/_viewgame/coinops/coinopsxlebidul/" + stem({game:system:theme}) + ".png")</visible>
 			<origin>0.5 0.5</origin>
 			<pos>0.46 0.5</pos>

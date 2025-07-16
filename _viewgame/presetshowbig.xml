@@ -498,8 +498,20 @@
 			<horizontalAlignment>left</horizontalAlignment>
 			<path>${themePath}/_viewgame/show/Bvierge.png</path>
 		</image>
+		<text name="binds_playcountone" extra="true">
+			<visible>{game:playcount} == 1 ? 1 : 0</visible>
+			<color>FFFFFF</color>
+			<text>{game:playcount} ${playcountone}</text>
+			<origin>0.5 0.5</origin>
+			<pos>0.73 0.802</pos>
+			<size>0.08 0.035</size>
+			<fontPath>${themePath}/_viewgame/show/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+		</text>
 		<text name="binds_playcount" extra="true">
-			<visible>{game:playcount} &gt; 0 ? 1 : 0</visible>
+			<visible>{game:playcount} &gt; 1 ? 1 : 0</visible>
 			<color>FFFFFF</color>
 			<text>{game:playcount} ${playcount}</text>
 			<origin>0.5 0.5</origin>
@@ -569,8 +581,22 @@
 			<path>${themePath}/_viewgame/show/Bvierge.png</path>
 		</image>
 		<text name="binds_players" extra="true">
-			<visible>{game:players} &gt; 0 ? 1 : 0</visible>
-			<text>{game:players} ${players}</text>
+			<visible>{game:players} &gt; 1 ? 1 : 0</visible>
+			<visible>{game:players} == 1 ? 0 : 1 &amp;&amp; {game:players} &lt; 1 ? 0 : 1 </visible>
+			<text>{game:players} ${playerss}</text>
+			<color>FFFFFF</color>
+			<origin>0.5 0.5</origin>
+			<pos>0.88 0.802</pos>
+			<size>0.075 0.035</size>
+			<fontPath>${themePath}/_viewgame/show/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+		</text>
+		<text name="binds_playersone" extra="true">
+			<visible>{game:players} == 0 ? 0 : 1</visible>
+			<visible>{game:players} == 1 ? 1 : 0</visible>
+			<text>{game:players} ${player}</text>
 			<color>FFFFFF</color>
 			<origin>0.5 0.5</origin>
 			<pos>0.88 0.802</pos>
@@ -630,7 +656,7 @@
 			<zIndex>205</zIndex>
 			<opacity>0.7</opacity>
 		</control>
-		<control name="binds_players,binds_noplayers,binds_releasedate,binds_noreleasedate,binds_playcount,binds_noplaycount,developer,binds_rating,binds_norating">
+		<control name="binds_players,binds_playersone,binds_noplayers,binds_releasedate,binds_noreleasedate,binds_playcount,binds_playcountone,binds_noplaycount,developer,binds_rating,binds_norating">
 			<color>FFFFFF</color>
 			<opacity>0.5</opacity>
 		</control>

@@ -5,10 +5,13 @@
 		<!-- ######## META DATA ####### -->
 		<languesdispo>Available languages:</languesdispo>
 		<nodates>No date</nodates>
-		<playcount>plays</playcount>
-		<noplaycount>No launch</noplaycount>
+		<playcountone>time</playcountone>
+		<playcount>times</playcount>
+		<noplaycount>No launches</noplaycount>
 		<players>player(s)</players>
-		<nogametime>No launch</nogametime>
+		<playerss>players</playerss>
+		<player>player</player>
+		<nogametime>No launches</nogametime>
 		<noplayerdata>Unknown</noplayerdata>
 		<noeditor>Unknown publisher</noeditor>
 		<noratings>No rating</noratings>
@@ -192,6 +195,7 @@
 		<fondsysunifiedautomarquee>CoinOPS Unified Collection - TV + automatic game poster</fondsysunifiedautomarquee>
 		<fondsysnext2>CoinOPS Next2 (incomplete)</fondsysnext2>
 		<fondsysnext>CoinOPS Next (incomplete)</fondsysnext>
+		<cabsonly>Arcade cabs them all ! (Vons build)</cabsonly>
 		<fondsyscustom>Customized (By X-LeBiDuL-X)</fondsyscustom>
 		<cabsdefault>System background - Arcade cabinet and/or default background (Left)</cabsdefault>
 		<viewlixnoir>Viewlix Black</viewlixnoir>

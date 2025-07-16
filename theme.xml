@@ -5,15 +5,19 @@
 	<variables>
 		<!-- #### System ################################################################################################################################################################# -->
 		<!-- Editer ce chemin pour déplacer les thème système et de jeux à un autre emplacement -->
-		<!-- <bobmediapath>${themePath}/../_bobmedia</bobmediapath> --> <!-- choisir ce chemin pour mettre les gametheme et systheme dans le dossier _bobmedia (par défaut) idéal pour ne rien perdre lors des maj du theme-->
+		<!-- <bobmediapath>${themePath}/../_bobmedia</bobmediapath> -->
+		<!-- choisir ce chemin pour mettre les gametheme et systheme dans le dossier _bobmedia (par défaut) idéal pour ne rien perdre lors des maj du theme-->
 		<!-- <bobmediapath>${themePath}</bobmediapath> choisir ce chemin pour mettre les gametheme et systheme directement dans le dossier theme : atention les mise à jour du thème écraseront vos gametheme et systheme -->
-		<bobmediapath>${themePath}</bobmediapath> <!-- choisir ce chemin pour mettre les gametheme et systheme directement dans le dossier theme : atention les mise à jour du thème écraseront vos gametheme et systheme -->
+		<bobmediapath>${themePath}</bobmediapath>
+		<!-- choisir ce chemin pour mettre les gametheme et systheme directement dans le dossier theme : atention les mise à jour du thème écraseront vos gametheme et systheme -->
 		<!-- Utilisé par Coinops theme standalone -->
 		<extgamecoverjpg>("${bobmediapath}/_gamemedia/"  + ({game:system:theme}) + "/cover/" + stem({game:rom}) + ".jpg")</extgamecoverjpg>
 		<extgamescreenjpg>("${bobmediapath}/_gamemedia/"  + ({game:system:theme}) + "/screenshots/" + stem({game:rom}) + ".jpg")</extgamescreenjpg>
 		<extgamevideomp4>("${bobmediapath}/_gamemedia/"  + ({game:system:theme}) + "/video/" + stem({game:rom}) + ".mp4")</extgamevideomp4>
 		<extgamevideoavi>("${bobmediapath}/_gamemedia/"  + ({game:system:theme}) + "/video/" + stem({game:rom}) + ".avi")</extgamevideoavi>
 		<intcoinopscollec>("${themePath}/_viewgame/coinops/coinopscollec/"  + ({game:system:theme}) + ".png")</intcoinopscollec>
+		<intspeccabsonly>("${themePath}/_viewgame/coinops/specificabs/"  + ({game:system:theme}) + ".png")</intspeccabsonly>
+		<intcoinopsnext>("${themePath}/_viewgame/coinops/coinopsnext/"  + ({game:system:theme}) + ".png")</intcoinopsnext>
 		<globalgamecabs>"${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png"</globalgamecabs>
 		<!-- System Chemin pour les logos systèmes supplémentaires -->
 		<extlogobd>${themePath}/_systemmedia/_logosyst/comic/${system.theme}.png</extlogobd>
@@ -23,7 +27,6 @@
 		<extglassnekhros>${themePath}/_systemmedia/_logosyst/nekhglass/${system.theme}.png</extglassnekhros>
 		<extlogohrectfresh>${themePath}/_systemmedia/_logosyst/hmaxrectfresh/${system.theme}.png</extlogohrectfresh>
 		<exthmaxrectrefl>${themePath}/_systemmedia/_logosyst/hmaxrectrefl/${system.theme}.png</exthmaxrectrefl>
-		
 		<!-- Utilisé par nesicaxlive theme standalone -->
 		<!-- System Chemin pour les logo système clear de base -->
 		<intlogoclearpng>${themePath}/_systemmedia/_logosyst/clearlogos/${system.theme}.png</intlogoclearpng>
@@ -33,10 +36,8 @@
 		<!-- Jeux : Condition si fanart ou box 2d -->
 		<standardsbuildsfanart>exists({game:fanart}) ? {game:fanart} : {game:thumbnail}</standardsbuildsfanart>
 		<freshbuildfanart>exists({game:image}) ? {game:image} : {game:thumbnail}</freshbuildfanart>
-		
 		<standardsbuildsfanarttest>!exists({game:fanart})</standardsbuildsfanarttest>
 		<freshbuildfanarttest>!exists({game:image})</freshbuildfanarttest>
-		
 		<!-- System : Vidéos de présentation système : videosyst.xml -->
 		<extspinxml>${bobmediapath}/_systemmedia/videosyst/hyperspin/${system.theme}.xml</extspinxml>
 		<extspinxpxml>${bobmediapath}/_systemmedia/videosyst/hyperspinxp/${system.theme}/systheme.xml</extspinxpxml>
@@ -50,7 +51,7 @@
 		<!-- System & Jeux : bezel du système associé au jeu -->
 		<intbezelgame>("${themePath}/_systemmedia/bezelsyst/" + ({game:system:theme}) + ".png")</intbezelgame>
 		<!-- System : Actif si absence de systheme.xml dans le thème hyperbat : videosyst.xml, fanartsyst.xml -->
-		<ifnoextsysthemeexist>!exists("${bobmediapath}/_systemmedia/videosyst/hyperspinxp/" + stem({system:theme}) + "/systheme.xml")</ifnoextsysthemeexist>		
+		<ifnoextsysthemeexist>!exists("${bobmediapath}/_systemmedia/videosyst/hyperspinxp/" + stem({system:theme}) + "/systheme.xml")</ifnoextsysthemeexist>
 		<!-- System : Affichage des fanart système : fanartsyst.xml -->
 		<intfanartfresh>${bobmediapath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg</intfanartfresh>
 		<intfanartcustom>${bobmediapath}/_systemmedia/_fanartsysteme/custom/${system.theme}.jpg</intfanartcustom>
@@ -183,19 +184,19 @@
 	</subset>
 	<!-- Quand MAJ remplacera le bloc en dessous  -->
 	<!-- <subset name="menuofficiel" displayName="${menuofficiel}"> -->
-		<!-- <include name="Desactive" ifSubset="systemview:copscurve|coinopsnext1|coinopsnext2|hyperspin|alekfull|hypermax|zspin" displayName="${desactive}"/> -->
-		<!-- <include name="menutxt" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:hyperspin|alekfull|hypermax" displayName="${menutxt}">${themePath}/_viewsystoption/sl-commun/menutxt.xml</include> -->
-		<!-- <include name="menuorb" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:hyperspin|alekfull|hypermax" displayName="${menuorb}">${themePath}/_viewsystoption/sl-commun/menuorbhori.xml</include> -->
-		<!-- <include name="menuorbvert" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:copscurve|coinopsnext1|coinopsnext2" displayName="${menuorbvert}">${themePath}/_viewsystoption/sl-commun/menuorbvert.xml</include> -->
-		<!-- <include name="menuorbcrcl" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:coinopsnext2" displayName="${menuorbcrcl}">${themePath}/_viewsystoption/sl-commun/menuorbcrcl.xml</include> -->
-		<!-- <include name="menucust" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:hyperspin|alekfull|hypermax" displayName="${menucust}">${themePath}/_viewsystoption/sl-commun/menutxt.xml</include> -->
-		<!-- <include name="menucustorb" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:hyperspin|alekfull|hypermax" displayName="${menucustorb}">${themePath}/_viewsystoption/sl-commun/menuorbhori.xml</include> -->
-		<!-- <include name="menucustorbvert" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:copscurve|coinopsnext1|coinopsnext2" displayName="${menucustorbvert}">${themePath}/_viewsystoption/sl-commun/menuorbvert.xml</include> -->
-		<!-- <include name="menucustorbcrcl" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:coinopsnext2" displayName="${menucustorbcrcl}">${themePath}/_viewsystoption/sl-commun/menuorbcrcl.xml</include> -->
-		<!-- <include name="menutxtzspin" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:zspin" displayName="${menutxtzspin}">${themePath}/_viewsystoption/sl-commun/menutxtzspin.xml</include> -->
-		<!-- <include name="menutxtzspincust" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:zspin" displayName="${menutxtzspincust}">${themePath}/_viewsystoption/sl-commun/menutxtzspin.xml</include> -->
-		<!-- <include name="menuteta" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:tetanos" displayName="${menuteta}">${themePath}/_viewsystoption/sl-commun/menutetanos.xml</include> -->
-		<!-- <include name="menucustteta" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:tetanos" displayName="${menucustteta}">${themePath}/_viewsystoption/sl-commun/menutetanos.xml</include> -->
+	<!-- <include name="Desactive" ifSubset="systemview:copscurve|coinopsnext1|coinopsnext2|hyperspin|alekfull|hypermax|zspin" displayName="${desactive}"/> -->
+	<!-- <include name="menutxt" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:hyperspin|alekfull|hypermax" displayName="${menutxt}">${themePath}/_viewsystoption/sl-commun/menutxt.xml</include> -->
+	<!-- <include name="menuorb" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:hyperspin|alekfull|hypermax" displayName="${menuorb}">${themePath}/_viewsystoption/sl-commun/menuorbhori.xml</include> -->
+	<!-- <include name="menuorbvert" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:copscurve|coinopsnext1|coinopsnext2" displayName="${menuorbvert}">${themePath}/_viewsystoption/sl-commun/menuorbvert.xml</include> -->
+	<!-- <include name="menuorbcrcl" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:coinopsnext2" displayName="${menuorbcrcl}">${themePath}/_viewsystoption/sl-commun/menuorbcrcl.xml</include> -->
+	<!-- <include name="menucust" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:hyperspin|alekfull|hypermax" displayName="${menucust}">${themePath}/_viewsystoption/sl-commun/menutxt.xml</include> -->
+	<!-- <include name="menucustorb" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:hyperspin|alekfull|hypermax" displayName="${menucustorb}">${themePath}/_viewsystoption/sl-commun/menuorbhori.xml</include> -->
+	<!-- <include name="menucustorbvert" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:copscurve|coinopsnext1|coinopsnext2" displayName="${menucustorbvert}">${themePath}/_viewsystoption/sl-commun/menuorbvert.xml</include> -->
+	<!-- <include name="menucustorbcrcl" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:coinopsnext2" displayName="${menucustorbcrcl}">${themePath}/_viewsystoption/sl-commun/menuorbcrcl.xml</include> -->
+	<!-- <include name="menutxtzspin" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:zspin" displayName="${menutxtzspin}">${themePath}/_viewsystoption/sl-commun/menutxtzspin.xml</include> -->
+	<!-- <include name="menutxtzspincust" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:zspin" displayName="${menutxtzspincust}">${themePath}/_viewsystoption/sl-commun/menutxtzspin.xml</include> -->
+	<!-- <include name="menuteta" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:tetanos" displayName="${menuteta}">${themePath}/_viewsystoption/sl-commun/menutetanos.xml</include> -->
+	<!-- <include name="menucustteta" if="{settings.SortSystems} == 'hardware'" ifSubset="systemview:tetanos" displayName="${menucustteta}">${themePath}/_viewsystoption/sl-commun/menutetanos.xml</include> -->
 	<!-- </subset> -->
 	<!-- fin du bloc  -->
 	<subset name="menuofficiel" displayName="${menuofficiel}">

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+		<image name="fondmur" extra="true">
+			<path>./_viewgame/coinops/murnuarrondi.png</path>
+			<size>1 1</size>
+			<pos>0.45 0.5</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>3</zIndex>
+			<opacity>1</opacity>
+		</image>
+		<!-- ################################################################################################# -->
+		<!-- ############################################ choix cabs Only ############################################ -->
+		<!-- ################################################################################################# -->
+		<!-- Affiche le choix de l'utilisateur si le fondsystem ou borne spécifique n'existent pas et qu'un fichier *.miss n'existe pas dans \_viewgame\coinops\coinopscollmiss -->
+		<image name="cabsonly" ifSubset="systback:cabsonly" extra="true">
+			<visible>!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png")</visible>
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
+			<linearSmooth>true</linearSmooth>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<autoFade>false</autoFade>
+			<path>${intspeccabsonly}</path>
+			<zIndex>10</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+		<image name="fonddefaut" ifSubset="systback:cabsonly" extra="true">
+			<linearSmooth>true</linearSmooth>
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<autoFade ifSubset="systbacktransition:standard">false</autoFade>
+			<path ifSubset="defaultcabs:trinitron">${themePath}/_viewgame/coinops/defautcabs/trinitron.png</path>
+			<path ifSubset="defaultcabs:viewlixbleue">${themePath}/_viewgame/coinops/defautcabs/bleue.png</path>
+			<path ifSubset="defaultcabs:viewlixjaune">${themePath}/_viewgame/coinops/defautcabs/jaune.png</path>
+			<path ifSubset="defaultcabs:viewlixrose">${themePath}/_viewgame/coinops/defautcabs/rose.png</path>
+			<path ifSubset="defaultcabs:viewlixrouge">${themePath}/_viewgame/coinops/defautcabs/rouge.png</path>
+			<path ifSubset="defaultcabs:viewlixvert">${themePath}/_viewgame/coinops/defautcabs/vert.png</path>
+			<path ifSubset="defaultcabs:viewlixviolet">${themePath}/_viewgame/coinops/defautcabs/violet.png</path>
+			<path ifSubset="defaultcabs:astrocity">${themePath}/_viewgame/coinops/defautcabs/astrocity.png</path>
+			<path ifSubset="defaultcabs:blastcity">${themePath}/_viewgame/coinops/defautcabs/blastcity.png</path>
+			<path ifSubset="defaultcabs:snkneogeo64">${themePath}/_viewgame/coinops/defautcabs/snk.png</path>
+			<path ifSubset="defaultcabs:snkneogeomvs">${themePath}/_viewgame/coinops/defautcabs/snkmvs.png</path>
+			<path ifSubset="defaultcabs:nuc">${themePath}/_viewgame/coinops/defautcabs/naomi.png</path>
+			<path ifSubset="defaultcabs:atomiswave">${themePath}/_viewgame/coinops/defautcabs/atomiswave.png</path>
+			<path ifSubset="defaultcabs:borne3d">${themePath}/_viewgame/coinops/defautcabs/3d.png</path>
+			<path ifSubset="defaultcabs:viewlixnoir">${themePath}/_viewgame/coinops/defautcabs/defautcabs.png</path>
+			<path if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">${themePath}/_viewgame/coinops/defautcabs/naomi.png</path>
+			<path if="{system.theme} == 'neogeo64'">${themePath}/_viewgame/coinops/defautcabs/neogeo64.png</path>
+			<path if="{system.theme} == 'atomiswave'">${themePath}/_viewgame/coinops/defautcabs/atomiswave.png</path>
+			<!-- <path if="${system.manufacturer} == 'Collections'">("${themePath}/_viewgame/coinops/defautcabs/" + stem({game:system:theme}) + ".png")</path> -->
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<visible>!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/specificabs/" + stem({game:system:theme}) + ".png")</visible>
+			<visible if="{system.theme} == 'fbneo' || 
+			{system.theme} == 'cps1' || 
+			{system.theme} == 'cps2' || 
+			{system.theme} == 'cps3' || 
+			{system.theme} == 'cave' || 
+			{system.theme} == 'hbmame' ">!exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/specificabs/" + stem({game:system:theme}) + ".png")</visible>
+		</image>
+		<!-- Marquee de la borne en fonction de la borne par défaut choisies -->
+		<image name="fondposter1" ifSubset="systback:cabsonly" extra="true">
+			<path ifSubset="custombuilds:standardbuilds">firstfile({game:fanart},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg",{game:image})</path>
+			<path ifSubset="custombuilds:retrofreshbat">firstfile({game:image},"${themePath}/_systemmedia/_fanartsysteme/fresh/${system.theme}.jpg")</path>
+			<color>b7b7b7</color>
+			<colorEnd>FFFFFFDD</colorEnd>
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.43 1</maxSize>
+			<pos>0.25 0.2</pos>
+			<size ifSubset="defaultcabs:borne3d">0.43 0.45</size>
+			<pos ifSubset="defaultcabs:borne3d">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:trinitron">0.33 0.35</size>
+			<pos ifSubset="defaultcabs:trinitron">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:astrocity">0.2 0.2</size>
+			<pos ifSubset="defaultcabs:astrocity">0.25 0.23</pos>
+			<size ifSubset="defaultcabs:blastcity">0.4 0</size>
+			<pos ifSubset="defaultcabs:blastcity">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:snkneogeo64">0.4 0.3</size>
+			<pos ifSubset="defaultcabs:snkneogeo64">0.25 0.15</pos>
+			<size ifSubset="defaultcabs:snkneogeomvs">0.45 0.35</size>
+			<pos ifSubset="defaultcabs:snkneogeomvs">0.25 0.105</pos>
+			<size ifSubset="defaultcabs:nuc">0.355 0</size>
+			<pos ifSubset="defaultcabs:nuc">0.245 0.105</pos>
+			<size ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.25 0.3</size>
+			<pos ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.25 0.25</pos>
+			<size if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.35 0.3</size>
+			<pos if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.25 0.105</pos>
+			<size if="{system.theme} == 'atomiswave'">0.25 0.3</size>
+			<pos if="{system.theme} == 'atomiswave'">0.25 0.23</pos>
+			<size if="{system.theme} == 'neogeo64'">0.4 0.3</size>
+			<pos if="{system.theme} == 'neogeo64'">0.25 0.15</pos>
+			<origin>0.5 0.5</origin>
+			<saturation>0.5</saturation>
+			<zIndex>3</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<visible>!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/specificabs/" + stem({game:system:theme}) + ".png")</visible>
+		</image>
+		<image name="fondposter2" ifSubset="systback:cabsonly" extra="true">
+			<autoFade>false</autoFade>
+			<tile>false</tile>
+			<maxSize>0.15 0.10</maxSize>
+			<pos>0.25 0.06</pos>
+			<maxSize ifSubset="defaultcabs:borne3d">0.2 0.2</maxSize>
+			<pos ifSubset="defaultcabs:borne3d">0.25 0.11</pos>
+			<maxSize ifSubset="defaultcabs:trinitron">0.2 0.15</maxSize>
+			<pos ifSubset="defaultcabs:trinitron">0.25 0.12</pos>
+			<maxSize ifSubset="defaultcabs:astrocity">0.1 0.1</maxSize>
+			<pos ifSubset="defaultcabs:astrocity">0.25 0.2</pos>
+			<maxSize ifSubset="defaultcabs:blastcity">0.2 0.12</maxSize>
+			<pos ifSubset="defaultcabs:blastcity">0.25 0.06</pos>
+			<maxSize ifSubset="defaultcabs:snkneogeo64">0.17 0.14</maxSize>
+			<pos ifSubset="defaultcabs:snkneogeo64">0.25 0.075</pos>
+			<maxSize ifSubset="defaultcabs:snkneogeomvs">0.2 0.2</maxSize>
+			<pos ifSubset="defaultcabs:snkneogeomvs">0.25 0.105</pos>
+			<maxSize ifSubset="defaultcabs:nuc">0.2 0.08</maxSize>
+			<pos ifSubset="defaultcabs:nuc">0.25 0.06</pos>
+			<maxSize ifSubset="defaultcabs:atomiswave">0.1 0.1</maxSize>
+			<pos ifSubset="defaultcabs:atomiswave">0.25 0.185</pos>
+			<maxSize ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.2 0.1</maxSize>
+			<pos ifSubset="defaultcabs:viewlixnoir|viewlixbleue|viewlixjaune|viewlixrose|viewlixrouge|viewlixvert|viewlixviolet">0.25 0.223</pos>
+			<maxSize if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.2 0.08</maxSize>
+			<pos if="{system.theme} == 'naomi' || {system.theme} == 'naomi2'">0.25 0.06</pos>
+			<size if="{system.theme} == 'atomiswave'">0.1 0.07</size>
+			<pos if="{system.theme} == 'atomiswave'">0.25 0.185</pos>
+			<size if="{system.theme} == 'neogeo64'">0.17 0.14</size>
+			<pos if="{system.theme} == 'neogeo64'">0.25 0.075</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>4</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+			<path>firstfile({game:wheel},{game:marquee})</path>
+			<visible>!exists("${bobmediapath}/_gamemedia/" + ({game:system:theme}) + "/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/specificabs/" + stem({game:system:theme}) + ".png")</visible>
+			<visible if="{system.theme} == 'fbneo' || 
+			{system.theme} == 'cps1' || 
+			{system.theme} == 'cps2' || 
+			{system.theme} == 'cps3' || 
+			{system.theme} == 'cave' || 
+			{system.theme} == 'hbmame' ">!exists("${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png") &amp;&amp;
+			!exists("${themePath}/_viewgame/coinops/specificabs/" + stem({game:system:theme}) + ".png")</visible>
+		</image>
+		<!-- Fin des marquees automatiques -->
+		<!-- Cabs avec wall originals -->
+		<image name="cabinets" ifSubset="systback:cabsonly" extra="true">
+			<linearSmooth>true</linearSmooth>
+			<color ifSubset="darkerlighter:darklum">858585ff</color>
+			<color ifSubset="darkerlighter:darkerlum">404040ff</color> 
+			<color ifSubset="darkerlighter:normallum">ffffffff</color>
+			<origin>0.5 0.5</origin>
+			<pos>0.46 0.5</pos>
+			<size>1 1</size>
+			<autoFade>false</autoFade>
+			<autoFade ifSubset="systbacktransition:standard">false</autoFade>
+			<path>${globalgamecabs}</path>
+			<path if="{system.theme} == 'fbneo' || 
+			{system.theme} == 'cps1' || 
+			{system.theme} == 'cps2' || 
+			{system.theme} == 'cps3' || 
+			{system.theme} == 'cave' || 
+			{system.theme} == 'hbmame' ">"${bobmediapath}/_gamemedia/mame/cabs/" + stem({game:rom}) + ".png"</path>
+			<zIndex>11</zIndex>
+			<scaleOrigin>-0.1 0</scaleOrigin>
+		</image>
+	</customView>
+</theme>

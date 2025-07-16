@@ -36,7 +36,7 @@
 		<image name="vignette" extra="true">
 			<pos>0.5 0.5</pos>
 			<origin>0.5 0.5</origin>
-			<maxSize>1 1</maxSize>
+			<size>1 1</size>
 			<path>./coinopsnext/overlay.png</path>
 			<gradientType>horizontal</gradientType>
 			<linearSmooth>true</linearSmooth>

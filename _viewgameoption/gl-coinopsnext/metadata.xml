@@ -82,8 +82,22 @@
 			<horizontalAlignment>left</horizontalAlignment>
 			<path>${themePath}/_viewgameoption/gl-coinopsnext/images/bvierge.png</path>
 		</image>
+		<text name="preset_playcount_one" extra="true">
+			<visible>{game:playcount} == 1 ? 1 : 0</visible>
+			<color>FFFFFF</color>
+			<text>{game:playcount} ${playcountone}</text>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.575 0.979</pos>
+			<pos ifHelpPrompts="true">0.575 0.939</pos>
+			<size>0.07 0.035</size>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<opacity>0.5</opacity>
+		</text>
 		<text name="preset_playcount" extra="true">
-			<visible>{game:playcount} &gt; 0 ? 1 : 0</visible>
+			<visible>{game:playcount} &gt; 1 ? 1 : 0</visible>
 			<color>FFFFFF</color>
 			<text>{game:playcount} ${playcount}</text>
 			<origin>0.5 0.5</origin>
@@ -165,8 +179,24 @@
 			<path>${themePath}/_viewgameoption/gl-coinopsnext/images/bvierge.png</path>
 		</image>
 		<text name="preset_players" extra="true">
-			<visible>{game:players} &gt; 0 ? 1 : 0</visible>
-			<text>{game:players} ${players}</text>
+			<visible>{game:players} &gt; 1 ? 1 : 0</visible>
+			<visible>{game:players} == 1 ? 0 : 1 &amp;&amp; {game:players} &lt; 1 ? 0 : 1 </visible>
+			<text>{game:players} ${playerss}</text>
+			<color>FFFFFF</color>
+			<origin>0.5 0.5</origin>
+			<pos ifHelpPrompts="false">0.718 0.979</pos>
+			<pos ifHelpPrompts="true">0.718 0.939</pos>
+			<size>0.063 0.035</size>
+			<fontPath>${themePath}/_viewgameoption/gl-coinopsnext/fonts/impact.ttf</fontPath>
+			<alignment>center</alignment>
+			<fontSize>0.020</fontSize>
+			<zIndex>305</zIndex>
+			<opacity>0.5</opacity>
+		</text>
+		<text name="preset_players_one" extra="true">
+			<visible>{game:players} == 0 ? 0 : 1</visible>
+			<visible>{game:players} == 1 ? 1 : 0</visible>
+			<text>{game:players} ${player}</text>
 			<color>FFFFFF</color>
 			<origin>0.5 0.5</origin>
 			<pos ifHelpPrompts="false">0.718 0.979</pos>

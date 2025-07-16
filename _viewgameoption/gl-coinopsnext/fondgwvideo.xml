@@ -5,9 +5,17 @@
 	<video name="loop01" extra="true">
 		<path ifSubset="fondvideogw:vagues">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/background.mp4</path>
 		<path ifSubset="fondvideogw:matrix">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/matrix.mp4</path>
+		<path ifSubset="fondvideogw:lightning2">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/lightning2.mp4</path>
+		<path ifSubset="fondvideogw:lightning3">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/lightning3.mp4</path>
+		<path ifSubset="fondvideogw:lightning5">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/lightning5.mp4</path>
+		<path ifSubset="fondvideogw:lightning6">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/lightning6.mp4</path>
+		<path ifSubset="fondvideogw:lightning8">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/lightning8.mp4</path>
+		<path ifSubset="fondvideogw:smoke2">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/smoke2.mp4</path>
+		<path ifSubset="fondvideogw:sparkles2">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/sparkles2.mp4</path>
+		<path ifSubset="fondvideogw:sparkles5">${themePath}/_viewgameoption/gl-coinopsnext/fondvideo/sparkles5.mp4</path>
 		<effect>none</effect>		
 		<origin>0.5 0.5</origin>
-		<pos>0.5 0.5</pos>
+		<pos>0.75 0.5</pos>
 		<maxSize>1 1</maxSize>
 		<zIndex>2</zIndex>
 		<opacity ifSubset="fondvideogwint:light">0.2</opacity>
