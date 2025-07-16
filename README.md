@@ -38,7 +38,7 @@ You can find more cabs and more artwork on my discord here : https://discord.com
 
 | Speedbull  | Traviolta
 | ------------- | ------------- |
-| ![speedbull](https://github.com/user-attachments/assets/b0481a96-ddc0-4b3e-9b25-e29e54a624df)  | ![typeR](https://github.com/user-attachments/assets/6d8abf11-6619-4524-89f1-c36363d15e74)  | 
+| ![speedbull](https://github.com/user-attachments/assets/b0481a96-ddc0-4b3e-9b25-e29e54a624df)  | ![traviolta](https://github.com/user-attachments/assets/c87e6fef-104c-4e71-880f-fd5d8cc1216d)  | 
 
 
 
