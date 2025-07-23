@@ -6,13 +6,13 @@
 			<visible>false</visible>
 		</video>
 		<image name="screenshotscust" extra="true">
+			<autoFade>false</autoFade>
 			<path>firstfile(${extgamescreenjpg},{game:screenshot},{game:image})</path>
 			<pos>0.2485 0.538</pos>
 			<maxSize>0.4 0.488</maxSize>
 			<origin>0.5 0.5</origin>
 			<zIndex>5</zIndex>
 			<scaleOrigin>0.15 0.15</scaleOrigin>
-			<autoFade>false</autoFade>
 		</image>
 		<video name="prevvid" extra="true">
 			<path>firstfile(${extgamevideomp4},${extgamevideoavi},{game:video})</path>

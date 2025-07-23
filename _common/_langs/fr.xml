@@ -419,5 +419,10 @@
 		<wheelcolor>Wheel - Couleur des logos non selectionnés</wheelcolor>
 		<blackwhite>Noir et Blanc</blackwhite>
 		<colored>Couleur par défaut</colored>		
+		<!-- Coinops luminosité des fonds système -->
+		<darkerlighter>Luminosité du fond</darkerlighter>
+		<normallum>lumineux (Défaut)</normallum>
+		<darklum>moyenne</darklum>
+		<darkerlum>sombre</darkerlum>		
 	</variables>
 </theme>

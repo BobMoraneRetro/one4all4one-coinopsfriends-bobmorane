@@ -61,7 +61,7 @@
 			<pos ifHelpPrompts="true">0.542 0.885</pos>
 			<pos ifHelpPrompts="false">0.542 0.925</pos>
 			<size>0.4 0.05</size>
-			<text>${languesdispo} ({game:lang})</text>
+			<text>${languesdispo} ({game:lang}) • Total games: {system:total}</text>
 			<glowColor>00000016</glowColor>
 			<glowSize>3</glowSize>
 			<alignment>left</alignment>
@@ -282,5 +282,18 @@
 			<color>ffffff</color>
 			<opacity>0.5</opacity>
 		</text>
+		<!-- <text name="numberofgames" extra="true"> -->
+			<!-- <text>TOTAL GAMES: {system:total}</text> -->
+			<!-- <origin>0.5 0.5</origin>	 -->
+			<!-- <origin ifHelpPrompts="false">1 0.5</origin> -->
+			<!-- <pos ifHelpPrompts="true">0.9 0.985</pos> -->
+			<!-- <pos ifHelpPrompts="false">0.995 0.015</pos> -->
+			<!-- <fontPath>${themePath}/_common/fonts/Digital-Serial-Bold-folder.ttf</fontPath> -->
+			<!-- <alignment>center</alignment> -->
+			<!-- <fontSize>0.02</fontSize> -->
+			<!-- <zIndex>305</zIndex> -->
+			<!-- <color>ffffff</color> -->
+			<!-- <opacity>0.7</opacity> -->
+		<!-- </text> -->
 	</customView>
 </theme>

@@ -92,9 +92,9 @@
 		<include name="off" displayName="Désactivé"/>
 	</subset>
 	<subset name="darkerlighter" displayName="${darkerlighter}" appliesTo="coinops">
-		<include name="normallum" displayName="${darkerlighter}"/>
-		<include name="darklum" displayName="${darkerlighter}"/>
-		<include name="darkerlum" displayName="${darkerlighter}"/>
+		<include name="normallum" displayName="${normallum}"/>
+		<include name="darklum" displayName="${darklum}"/>
+		<include name="darkerlum" displayName="${darkerlum}"/>
 	</subset>
 	<subset name="prevdemo" ifSubset="lismoi:retrobat" displayName="${prevdemo}" appliesTo="coinops">
 		<include name="pvidcustomv2" displayName="${pvidcustomv2}">./_viewgameoption/gl-coinopsnext/p1fixencustomnscrap.xml</include>

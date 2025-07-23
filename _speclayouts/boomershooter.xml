@@ -2,16 +2,22 @@
 <theme>
 	<formatVersion>7</formatVersion>
 	<customView name="coinops" displayName="${viewchoicecoinops}" inherits="gamecarousel">
+			<image name="honeyback" extra="true">
+			<visible>false</visible>
+		</image>
 		<image name="fondecranpreview" ifSubset="systback:cpscollection|cpsperso" extra="true">
+			<!-- <autoFade>false</autoFade> -->
 			<size>0.55 0.52</size>
 			<pos>0.25 0.496</pos>
 			<roundCorners>0</roundCorners>
 		</image>
 		<image name="screenshotcustomgames" ifSubset="systback:cpscollection|cpsperso" extra="true">
+			<!-- <autoFade>false</autoFade> -->
 			<pos>0.265 0.49</pos>
 			<maxSize>0.52 0.55</maxSize>
 		</image>
 		<image name="screenshotscust" ifSubset="systback:cpscollection|cpsperso" extra="true">
+			<!-- <autoFade>false</autoFade> -->
 			<linearSmooth>true</linearSmooth>
 			<shared>false</shared>
 			<pos>0.265 0.49</pos>

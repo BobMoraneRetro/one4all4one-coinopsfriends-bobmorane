@@ -59,6 +59,15 @@
 			<opacity>1</opacity>
 			<roundCorners>0.05</roundCorners>
 		</image>
+		<image name="honeyback" extra="true">
+			<path>${themePath}/_viewgame/coinops/overlay/honey.png</path>
+			<size>0.395 0.52</size>
+			<pos>0.241 0.54</pos>
+			<origin>0.5 0.5</origin>
+			<zIndex>4</zIndex>
+			<opacity>1</opacity>
+			<roundCorners>0.05</roundCorners>
+		</image>
 		<rating name="md_rating">
 			<visible>false</visible>
 		</rating>

@@ -409,5 +409,14 @@
 		<systprec>Previous System</systprec>
 		<iconsetposition>Button position only</iconsetposition>
 		<nesicaxlivedemomode>NESiCAxLive Demo Mode</nesicaxlivedemomode>
+		<!-- Coinops logo noir et blanc -->
+		<wheelcolor>Wheel - Color of unselected logos</wheelcolor>
+		<blackwhite>Black and White</blackwhite>
+		<colored>Default Color</colored>
+		<!-- Coinops luminosité des fonds système -->
+		<darkerlighter>Background brightness</darkerlighter>
+		<normallum>bright (Default)</normallum>
+		<darklum>medium</darklum>
+		<darkerlum>dark</darkerlum>
 	</variables>
 </theme>
