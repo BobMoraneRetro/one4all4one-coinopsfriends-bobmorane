@@ -50,6 +50,8 @@
 		<intbezelsyst>("${themePath}/_systemmedia/bezelsyst/" + ({system:theme}) + ".png")</intbezelsyst>
 		<!-- System & Jeux : bezel du système associé au jeu -->
 		<intbezelgame>("${themePath}/_systemmedia/bezelsyst/" + ({game:system:theme}) + ".png")</intbezelgame>
+		<!-- System : pointeurs en png associé aux systèmes -->
+		<pointers4syst>${themePath}/_systemmedia/pointers-r/${system.theme}.png</pointers4syst>
 		<!-- System : Actif si absence de systheme.xml dans le thème hyperbat : videosyst.xml, fanartsyst.xml -->
 		<ifnoextsysthemeexist>!exists("${bobmediapath}/_systemmedia/videosyst/hyperspinxp/" + stem({system:theme}) + "/systheme.xml")</ifnoextsysthemeexist>
 		<!-- System : Affichage des fanart système : fanartsyst.xml -->
@@ -91,6 +93,7 @@
 		<include name="coinopsnext1" displayName="${systviewcops1}">${themePath}/_viewsyst/coinopsnext1.xml</include>
 		<include name="coinopsnext2" displayName="${systviewcops2}">${themePath}/_viewsyst/coinopsnext2.xml</include>
 		<include name="tetanos" displayName="${systviewtetanos}">${themePath}/_viewsyst/tetanos.xml</include>
+		<include name="hypermax" displayName="${systviewHM}">${themePath}/_viewsyst/hypermx.xml</include>
 		<!-- <include name="nesicaxlivetest" displayName="${systviewnesicatest}">${themePath}/_viewsyst/nesicaxlivetest.xml</include> -->
 	</subset>
 	<!-- ################################################################################# -->

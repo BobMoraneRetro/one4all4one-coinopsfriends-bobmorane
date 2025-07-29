@@ -61,7 +61,7 @@
 			<pos ifHelpPrompts="true">0.542 0.885</pos>
 			<pos ifHelpPrompts="false">0.542 0.925</pos>
 			<size>0.4 0.05</size>
-			<text>${languesdispo} ({game:lang}) • Total games: {system:total}</text>
+			<text>Total games for ${system.theme} : {system:total} • ${languesdispo} ({game:lang})</text>
 			<glowColor>00000016</glowColor>
 			<glowSize>3</glowSize>
 			<alignment>left</alignment>
